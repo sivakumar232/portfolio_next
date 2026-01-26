@@ -10,6 +10,7 @@ const About: React.FC = () => {
             {/* About Section Text */}
             <div className="text-black dark:text-white flex flex-col font-hanken rounded-xl px-4 sm:px-6 ">
                 <div>
+
                     <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
                         Full-stack developer from India. I build scalable, production-ready web apps using{' '}
                         <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
@@ -31,17 +32,10 @@ const About: React.FC = () => {
                             <FaNodeJs className="text-[#339933] text-sm sm:text-base" />
                             <span className="text-black dark:text-white">Node.js</span>
                         </span>
-                        .
+                        .                         Currently going deeper into backend systems and impactful projects.If you're looking to collaborate or need help with something, feel free to reach out—I'm always excited to work on meaningful projects.
+
                     </p>
-                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mt-3 sm:mt-2">
-                        With a focus on clean architecture and scalable solutions, I'm passionate about solving real-world problems through innovative web technologies. Most of my time goes into working on personal projects that push the boundaries of what's possible.
-                    </p>
-                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mt-3 sm:mt-2">
-                        If you're looking to collaborate or need help with something, feel free to reach out—I'm always excited to work on meaningful projects.
-                    </p>
-                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed mt-3 sm:mt-2">
-                        Currently going deeper into backend systems and impactful projects.
-                    </p>
+
                 </div>
             </div>
 
