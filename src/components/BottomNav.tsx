@@ -1,0 +1,97 @@
+"use client";
+
+import React, { useState, useEffect } from 'react';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaXTwitter, FaHouse } from 'react-icons/fa6'; // Corrected Home icon to FaHouse if FaHome is not available in fa6 or just use fa
+import { FaHome } from 'react-icons/fa';
+import { BookOpen } from 'lucide-react';
+
+const BottomNav: React.FC = () => {
+    const [isHovered, setIsHovered] = useState(false);
+    // Theme handling is done via layout script and global class, so this component just links
+    // But original component had theme toggling commented out, and some theme logic.
+    // I will keep it clean as per original, removing the unused theme state logic if it's not used in render.
+    // Original had commented out theme toggle button.
+
+    return (
+        <nav
+            className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <div
+                className={`flex items-center gap-4 px-6 py-3 rounded-full bg-white/80 dark:bg-black/80 backdrop-blur-md border border-neutral-200 dark:border-white/20 shadow-lg transition-all duration-300 ${isHovered ? 'px-8 gap-6' : 'px-6 gap-4'
+                    }`}
+            >
+                {/* Home */}
+                <a
+                    href="#"
+                    className="relative flex items-center justify-center w-10 h-10 rounded-full text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 hover:scale-110 transition-all duration-200 group"
+                    aria-label="Home"
+                >
+                    <FaHome className="text-xl" />
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Home
+                    </span>
+                </a>
+
+                {/* Blog */}
+                <a
+                    href="#blog"
+                    className="relative flex items-center justify-center w-10 h-10 rounded-full text-black dark:text-white hover:bg-black/10 dark:hover:bg-white/10 hover:scale-110 transition-all duration-200 group"
+                    aria-label="Blog"
+                >
+                    <BookOpen className="w-5 h-5" />
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Blog
+                    </span>
+                </a>
+
+                {/* Separator */}
+                <div className="h-6 w-px bg-black/20 dark:bg-white/20"></div>
+
+                {/* Social Links */}
+                <a
+                    href="https://github.com/sivakumar232"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-black dark:text-white hover:scale-110 transition-transform duration-200 group"
+                    aria-label="GitHub"
+                >
+                    <FaGithub className="text-xl" />
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        GitHub
+                    </span>
+                </a>
+
+                <a
+                    href="https://twitter.com/sivakumarr3105"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-black dark:text-white hover:scale-110 transition-transform duration-200 group"
+                    aria-label="Twitter"
+                >
+                    <FaXTwitter className="text-xl" />
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        Twitter / X
+                    </span>
+                </a>
+
+                <a
+                    href="https://linkedin.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative text-black dark:text-white hover:scale-110 transition-transform duration-200 group"
+                    aria-label="LinkedIn"
+                >
+                    <FaLinkedin className="text-xl" />
+                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                        LinkedIn
+                    </span>
+                </a>
+            </div>
+        </nav>
+    );
+};
+
+export default BottomNav;

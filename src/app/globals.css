@@ -1,26 +1,344 @@
 @import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Quote Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Scrollbar for GitHub Activity */
+#github-activity-container {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+#github-activity-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+#github-activity-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#github-activity-container::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+
+#github-activity-container::-webkit-scrollbar-thumb:hover {
+  background-color: #000;
+}
+
+/* Dark mode scrollbar */
+.dark #github-activity-container {
+  scrollbar-color: #4b5563 transparent;
+}
+
+.dark #github-activity-container::-webkit-scrollbar-thumb {
+  background-color: #4b5563;
+}
+
+.dark #github-activity-container::-webkit-scrollbar-thumb:hover {
+  background-color: #000;
+}
+
+/* Raleway */
+@font-face {
+  font-family: Raleway;
+  src: url("../assets/fonts/Raleway/Raleway-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Orbitron;
+  src: url("../assets/fonts/Orbitron/Orbitron-VariableFont_wght.ttf");
+}
+
+/* Montserrat */
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf");
+}
+
+/* Lato */
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Black.ttf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-Thin.ttf");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Lato;
+  src: url("../assets/fonts/Lato/Lato-ThinItalic.ttf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Roboto */
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf");
+  font-style: italic;
+}
+
+/* Roboto Mono */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("../assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+/* Ubuntu */
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Italic.ttf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Bold.ttf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Medium.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Ubuntu;
+  src: url("../assets/fonts/Ubuntu/Ubuntu-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Bebas_Neue;
+  src: url("../assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Bangers;
+  src: url("../assets/fonts/Bangers/Bangers-Regular.ttf");
+  font-weight: 500;
+}
+
+@theme {
+  --font-banger: Bangers;
+  --font-raleway: Raleway, "sans-serif";
+  --font-bebas_neue: Bebas_Neue, "sans-serif";
+  --font-montserrat: Montserrat, "sans-serif";
+  --font-lato: Lato, "sans-serif";
+  --font-roboto: Roboto, "sans-serif";
+  --font-roboto-mono: "Roboto Mono", "monospace";
+  --font-ubuntu: Ubuntu, "sans-serif";
+  --font-orbitron: Orbitron, "monospace";
+}
+
+.blink_me {
+  animation: heartbeat 1.5s ease-in-out infinite;
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  border: 1px solid #22c55e;
+  background-color: #22c55e;
+  border-radius: 100%;
+  box-shadow: 0 0 4px #22c55e;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark .blink_me {
+    border: 1px solid #22c55e;
+    background-color: #22c55e;
+    box-shadow: 0 0 4px #22c55e;
+  }
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  14% {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+
+  28% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  42% {
+    transform: scale(1.3);
+    opacity: 0.9;
+  }
+
+  56% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.6;
+  }
+}
+
+::selection {
+  color: black;
+  background-color: white;
+}
+
+canvas {
+  display: block !important;
+  position: fixed !important;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Hide scrollbar in GitHub Calendar by default, show on hover */
+.react-activity-calendar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-x: auto;
+}
+
+.react-activity-calendar::-webkit-scrollbar {
+  height: 6px;
+}
+
+.react-activity-calendar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.react-activity-calendar::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 3px;
+}
+
+.react-activity-calendar:hover {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+.dark .react-activity-calendar:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+.react-activity-calendar:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dark .react-activity-calendar:hover::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.react-activity-calendar:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dark .react-activity-calendar:hover::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
