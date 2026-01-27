@@ -61,11 +61,11 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                     return (
                         <div
                             key={index}
-                            className="group flex flex-row bg-transparent border border-dashed border-neutral-400 hover:border-neutral-600 dark:border-neutral-700   transition-all relative overflow-hidden"
+                            className="group flex flex-col md:flex-row bg-transparent border border-dashed border-neutral-400 hover:border-neutral-600 dark:border-neutral-700   transition-all relative overflow-hidden"
                         >
                             {/* Project Image - Left Side */}
                             <div className="p-4 flex items-center justify-center">
-                                <div className="relative w-56 h-40 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 dark:from-purple-900/30 dark:via-blue-900/30 dark:to-pink-900/30 rounded-lg overflow-hidden">
+                                <div className="relative w-full md:w-56 h-40 md:h-40 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 dark:from-purple-900/30 dark:via-blue-900/30 dark:to-pink-900/30 rounded-lg overflow-hidden">
                                     {/* Placeholder for project image - you can replace this later */}
                                     <div className="absolute inset-0 flex items-center justify-center text-neutral-400 dark:text-neutral-600">
                                         <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
