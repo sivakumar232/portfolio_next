@@ -43,7 +43,7 @@ const About: React.FC = () => {
             {/* Education Section - Original Style */}
             <div className="text-black dark:text-white font-hanken rounded-xl px-2 md:px-14 py-4">
                 <h1 className="text-lg sm:text-xl font-hanken font-semibold mb-4 sm:mb-6">Education</h1>
-                <div className="flex items-start gap-3 group">
+                <div className="flex items-start border p-4 rounded-xl border-dashed border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 gap-3 group">
                     <div className="w-10 h-10 shrink-0 border border-neutral-200 dark:border-neutral-800 rounded-sm overflow-hidden relative">
                         <Image
                             src={srkrLogo}
