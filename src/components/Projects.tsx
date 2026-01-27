@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaLink } from 'react-icons/fa6';
@@ -54,39 +56,28 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                 )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex flex-col gap-4">
                 {displayedProjects.map((project, index) => {
-                    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-                        const { currentTarget, clientX, clientY } = e;
-                        const { left, top } = currentTarget.getBoundingClientRect();
-                        const x = clientX - left;
-                        const y = clientY - top;
-                        currentTarget.style.setProperty("--mouse-x", `${x}px`);
-                        currentTarget.style.setProperty("--mouse-y", `${y}px`);
-                    };
-
                     return (
                         <div
                             key={index}
-                            onMouseMove={handleMouseMove}
-                            className="group flex flex-col p-5 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600 transition-all relative h-full overflow-hidden"
+                            className="group flex flex-row bg-transparent border border-dashed border-neutral-400 hover:border-neutral-600 dark:border-neutral-700   transition-all relative overflow-hidden"
                         >
-                            {/* Hover Glow Effect */}
-                            <div
-                                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                                style={{
-                                    background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(13, 178, 255, 0.08), transparent 40%)`
-                                }}
-                            />
-                            <div
-                                className="pointer-events-none absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 dark:block hidden"
-                                style={{
-                                    background: `radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.06), transparent 40%)`
-                                }}
-                            />
+                            {/* Project Image - Left Side */}
+                            <div className="p-4 flex items-center justify-center">
+                                <div className="relative w-56 h-40 bg-gradient-to-br from-purple-500/20 via-blue-500/20 to-pink-500/20 dark:from-purple-900/30 dark:via-blue-900/30 dark:to-pink-900/30 rounded-lg overflow-hidden">
+                                    {/* Placeholder for project image - you can replace this later */}
+                                    <div className="absolute inset-0 flex items-center justify-center text-neutral-400 dark:text-neutral-600">
+                                        <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <div className="relative z-10 flex flex-col h-full">
-                                <div className="flex justify-between items-start mb-4">
+                            {/* Content Section - Right Side */}
+                            <div className="relative z-10 flex flex-col flex-1 p-5">
+                                <div className="flex justify-between items-start mb-3">
                                     <h2 className="text-xl font-bold font-hanken text-black dark:text-white pr-4">{project.title}</h2>
                                     <div className="flex gap-2 shrink-0">
                                         {project.link && (
@@ -100,7 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                                     </div>
                                 </div>
 
-                                <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed flex-grow font-hanken">
+                                <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4 leading-relaxed font-hanken">
                                     {project.description}
                                 </p>
 

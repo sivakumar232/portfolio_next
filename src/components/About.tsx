@@ -8,39 +8,41 @@ const About: React.FC = () => {
     return (
         <div id="about" className="-mt-10">
             {/* About Section Text */}
-            <div className="text-black dark:text-white flex flex-col font-hanken rounded-xl px-4 sm:px-6 ">
-                <div>
+            <div className="px-6 py-4">
+                <div className="text-black dark:text-white flex flex-col font-hanken rounded-xl">
+                    <div>
 
-                    <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
-                        Full-stack developer from India. I build scalable, production-ready web apps using{' '}
-                        <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                            <FaReact className="text-[#61DAFB] text-sm sm:text-base" />
-                            <span className="text-black dark:text-white">React</span>
-                        </span>
-                        ,{' '}
-                        <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                            <SiNextdotjs className="text-black dark:text-white text-sm sm:text-base" />
-                            <span className="text-black dark:text-white">Next.js</span>
-                        </span>
-                        ,{' '}
-                        <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                            <SiTypescript className="text-[#3178C6] text-sm sm:text-base" />
-                            <span className="text-black dark:text-white">TypeScript</span>
-                        </span>
-                        , and{' '}
-                        <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
-                            <FaNodeJs className="text-[#339933] text-sm sm:text-base" />
-                            <span className="text-black dark:text-white">Node.js</span>
-                        </span>
-                        .                         Currently going deeper into backend systems and impactful projects.If you're looking to collaborate or need help with something, feel free to reach out—I'm always excited to work on meaningful projects.
+                        <p className="text-sm sm:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                            Full-stack developer from India. I build scalable, production-ready web apps using{' '}
+                            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                                <FaReact className="text-[#61DAFB] text-sm sm:text-base" />
+                                <span className="text-black dark:text-white">React</span>
+                            </span>
+                            ,{' '}
+                            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                                <SiNextdotjs className="text-black dark:text-white text-sm sm:text-base" />
+                                <span className="text-black dark:text-white">Next.js</span>
+                            </span>
+                            ,{' '}
+                            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                                <SiTypescript className="text-[#3178C6] text-sm sm:text-base" />
+                                <span className="text-black dark:text-white">TypeScript</span>
+                            </span>
+                            , and{' '}
+                            <span className="inline-flex items-center gap-1.5 sm:gap-2 px-2 sm:px-3 py-1 sm:py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs sm:text-sm font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer">
+                                <FaNodeJs className="text-[#339933] text-sm sm:text-base" />
+                                <span className="text-black dark:text-white">Node.js</span>
+                            </span>
+                            .                         Currently going deeper into backend systems and impactful projects.If you're looking to collaborate or need help with something, feel free to reach out—I'm always excited to work on meaningful projects.
 
-                    </p>
+                        </p>
 
+                    </div>
                 </div>
             </div>
 
             {/* Education Section - Original Style */}
-            <div className="text-black dark:text-white font-hanken rounded-xl px-4 sm:px-6 py-4">
+            <div className="text-black dark:text-white font-hanken rounded-xl px-6 py-4">
                 <h1 className="text-xl sm:text-2xl font-hanken font-semibold mb-4 sm:mb-6">Education</h1>
                 <div className="flex items-start gap-3 group">
                     <div className="w-10 h-10 shrink-0 border border-neutral-200 dark:border-neutral-800 rounded-sm overflow-hidden relative">

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import OnekoLoader from './Onekoloader';
 import VisitorCounter from './VisitorCounter';
-import TopNav from './TopNav';
+import DarkThemeToggle from './DarkThemeToggle';
 import Banner from './Banner';
 import About from './About';
 import Projects from './Projects';
@@ -42,7 +42,7 @@ const MainContent: React.FC = () => {
     // Lenis Smooth Scroll
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 1.2,
+            duration: 1.5,
             easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             gestureDirection: 'vertical',
@@ -75,10 +75,12 @@ const MainContent: React.FC = () => {
     return (
         <div className="overflow-x-hidden bg-white dark:bg-black bg-no-repeat bg-center bg-fixed min-h-screen transition-colors duration-300 relative bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]">
 
-            {/* Top Navigation */}
-            <TopNav isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+            {/* Theme Toggle - Fixed Top Right */}
+            <div className="fixed top-6 right-6 z-50">
+                <DarkThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+            </div>
 
-            <div className="px-4 py-8 space-y-6 pt-24" style={{ maxWidth: '832px', margin: '0 auto' }}>
+            <div className="px-4 py-8 space-y-6 pt-8" style={{ maxWidth: '832px', margin: '0 auto' }}>
 
                 <Banner />
 
