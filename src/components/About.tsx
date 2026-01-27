@@ -23,7 +23,7 @@ const About: React.FC = () => {
                                 <SiNextdotjs className="text-sm sm:text-base relative top-[1px]" />
                                 <span>Next.js</span>
                             </span>
-                            ,{' '}
+                            {' '}
                             <span className="inline-flex items-center gap-1 font-semibold text-black dark:text-white align-middle">
                                 <SiTypescript className="text-sm sm:text-base relative top-[1px]" />
                                 <span>TypeScript</span>
