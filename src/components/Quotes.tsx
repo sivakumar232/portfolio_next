@@ -69,17 +69,17 @@ const Quotes: React.FC = () => {
     // No auto-rotation - quote only changes on page refresh or manual click
 
     return (
-        <div className="px-6 py-4">
-            <div className="text-black border border-neutral-400 hover:border-neutral-600 dark:border-neutral-700 border-dashed dark:text-white  px-6 py-4">
+        <div className="px-6 py-4 ">
+            <div className="text-black border border-neutral-400 group hover:border-neutral-600 dark:border-neutral-700 border-dashed dark:text-white  px-6 py-4">
                 <div className="max-w-3xl mx-auto text-center">
-                    <FaQuoteLeft className="text-6xl text-neutral-400 dark:text-neutral-600 mx-auto " />
+                    <FaQuoteLeft className="text-6xl text-neutral-400  transition-all duration-400 ease-in ease-out group-hover:text-neutral-900 dark:group-hover:text-white dark:text-neutral-500 dark:text-neutral-600 mx-auto " />
 
                     <div className="relative min-h-[120px] flex items-center justify-center">
                         <div
                             key={currentQuote}
                             className="animate-[fadeIn_0.5s_ease-in-out]"
                         >
-                            <p className="text-xl md:text-2xl font-hanken font-medium leading-relaxed mb-4 text-neutral-700 dark:text-neutral-300">
+                            <p className="text-xl md:text-2xl font-hanken font-medium leading-relaxed mb-4 text-neutral-600 dark:text-neutral-300">
                                 "{quotes[currentQuote].text}"
                             </p>
                             <p className="text-sm font-hanken text-neutral-500 dark:text-neutral-500">

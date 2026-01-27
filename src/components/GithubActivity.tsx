@@ -15,10 +15,24 @@ const GithubActivity: React.FC<GithubActivityProps> = ({ isDarkMode }) => {
                     blockSize={11}
                     blockMargin={4}
                     fontSize={14}
-                    theme={{
-                        light: ['#ebedf0', '#c4c4c8', '#9ca3af', '#6b7280', '#374151'],
-                        dark: ['#0d1117', '#1a1625', '#2d1b4e', '#4c1d95', '#7c3aed'],
-                    }}
+theme={{
+  light: [
+    '#ffffff', 
+    '#f0ecff', 
+    '#d9d2ff', 
+    '#a78bfa', 
+    '#5b21b6', 
+  ],
+  dark: [
+    '#000000', 
+    '#221633',     '#3b1d6f',
+    '#7c3aed', 
+    '#e9d5ff', 
+  ],
+}}
+
+
+
                     colorScheme={isDarkMode ? 'dark' : 'light'}
                     style={{
                         color: isDarkMode ? '#fff' : '#000'

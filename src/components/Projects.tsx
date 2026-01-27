@@ -5,6 +5,9 @@ import Image from 'next/image';
 import { BsGithub } from 'react-icons/bs';
 import { FaLink } from 'react-icons/fa6';
 import whoamiBanner from '../assets/project_banners/whoami.jpeg';
+import syncaiBanner from '../assets/project_banners/syncai.jpeg';
+import bushidoBanner from '../assets/project_banners/bushido.jpeg';
+import backdropBanner from '../assets/project_banners/backdrop.jpeg';
 
 interface ProjectsProps {
     limit?: number;
@@ -26,7 +29,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
             tags: ["React", "Node.js", "Vercel"],
             github: "https://github.com/sivakumar232/Bushido",
             link: "https://bushido-zeta.vercel.app/",
-            image: null
+            image: bushidoBanner
         },
         {
             title: "BackdropUi",
@@ -34,7 +37,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
             tags: ["React", "Tailwind CSS"],
             github: "https://github.com/sivakumar232/BackdropUI",
             link: "https://sivakumar232.github.io/BackdropUI/",
-            image: null
+            image: backdropBanner
         },
         {
             title: "Sync AI",
@@ -42,15 +45,15 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
             tags: ["React", "Tailwind CSS", "Supabase"],
             github: "https://github.com/sivakumar232/timetable-frontend",
             link: null,
-            image: null
+            image: syncaiBanner
         }
     ];
 
     const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
-        <div id="projects" className="text-black dark:text-white rounded-xl px-0 py-4">
-            <div className="flex justify-between items-end mb-6 px-6">
+        <div id="projects" className="text-black dark:text-white rounded-xl px-6 py-4">
+            <div className="flex justify-between items-end mb-6">
                 <div>
                     <h1 className="text-sm font-hanken font-semibold text-neutral-400">Featured</h1>
                     <h1 className="text-2xl font-hanken font-semibold">Projects</h1>
@@ -69,21 +72,19 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                             key={index}
                             className="group flex flex-col md:flex-row bg-black border border-dashed border-neutral-700 hover:border-neutral-500 transition-all relative overflow-hidden p-4 gap-4"
                         >
-                            {/* Project Image - Matches the dark grey card look */}
+                            {/* Project Image */}
                             <div className="flex items-center justify-center shrink-0">
-                                <div className="relative w-full md:w-56 h-40 bg-[#33363D] rounded-lg overflow-hidden shadow-lg p-3">
+                                <div className="relative w-full md:w-80 h-40 rounded-lg overflow-hidden">
                                     {project.image ? (
-                                        <div className="relative w-full h-full">
-                                            <Image
-                                                src={project.image}
-                                                alt={project.title}
-                                                fill
-                                                className="rounded-md object-cover"
-                                                sizes="(max-width: 768px) 100vw, 400px"
-                                            />
-                                        </div>
+                                        <Image
+                                            src={project.image}
+                                            alt={project.title}
+                                            fill
+                                            className="rounded-lg object-cover"
+                                            sizes="(max-width: 768px) 100vw, 320px"
+                                        />
                                     ) : (
-                                        <div className="absolute inset-0 flex items-center justify-center text-neutral-500">
+                                        <div className="absolute inset-0 flex items-center justify-center bg-neutral-800 text-neutral-500">
                                             <svg className="w-16 h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                             </svg>
@@ -104,7 +105,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                                                 href={project.link}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center gap-2 bg-[#1A1A1A] border border-neutral-700 px-4 py-1.5 rounded-lg text-white text-sm hover:bg-neutral-800 transition-all"
+                                                className="flex items-center gap-2 bg-[#1A1A1A] border border-neutral-700 border-dashed px-4 py-1.5 rounded-lg text-white text-sm hover:bg-neutral-800 transition-all"
                                             >
                                                 <FaLink size={14} /> Live
                                             </a>
@@ -113,7 +114,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                                             href={project.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="flex items-center gap-2 bg-[#1A1A1A] border border-neutral-700 px-4 py-1.5 rounded-lg text-white text-sm hover:bg-neutral-800 transition-all"
+                                            className="flex items-center gap-2 bg-[#1A1A1A] border border-neutral-700 border-dashed px-4 py-1.5 rounded-lg text-white text-sm hover:bg-neutral-800 transition-all"
                                         >
                                             <BsGithub size={16} /> GitHub
                                         </a>
