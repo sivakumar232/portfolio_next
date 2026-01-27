@@ -52,7 +52,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
     const displayedProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
-        <div id="projects" className="text-black dark:text-white rounded-xl px-14 py-4">
+        <div id="projects" className="text-black dark:text-white rounded-xl px-2 md:px-14 py-4">
             <div className="flex justify-between items-end mb-6">
                 <div>
                     <h1 className="text-xs font-hanken font-semibold text-neutral-400">Featured</h1>
@@ -70,7 +70,7 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
                     return (
                         <div
                             key={index}
-                            className="group flex flex-col md:flex-row bg-white dark:bg-black border border-dashed border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all relative overflow-hidden p-4 gap-4 rounded-xl"
+                            className="group flex flex-col md:flex-row bg-white dark:bg-black border border-dashed border-neutral-300 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 transition-all relative overflow-hidden p-5 gap-4 rounded-xl"
                         >
                             {/* Project Image */}
                             <div className="flex items-center justify-center shrink-0">

@@ -4,7 +4,7 @@ import { SiTailwindcss, SiNextdotjs, SiExpress, SiPostgresql, SiMongodb, SiSupab
 
 const Skills: React.FC = () => {
     return (
-        <div id="skills" className="text-black dark:text-white rounded-xl px-14 py-4">
+        <div id="skills" className="text-black dark:text-white rounded-xl px-2 md:px-14 py-4">
             <h1 className="text-xl font-hanken font-semibold mb-6">Skills & Tools</h1>
 
             <div className="flex flex-wrap items-center gap-1.5">

@@ -80,7 +80,7 @@ const MainContent: React.FC = () => {
                 <DarkThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
             </div>
 
-            <div className="px-4 py-8 space-y-6 pt-8" style={{ maxWidth: '832px', margin: '0 auto' }}>
+            <div className="px-4 py-8 space-y-2 pt-8" style={{ maxWidth: '832px', margin: '0 auto' }}>
 
                 <Banner />
 

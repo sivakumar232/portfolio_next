@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Contact: React.FC = () => {
     return (
-        <div id="contact" className="text-black dark:text-white rounded-xl px-14 py-4">
+        <div id="contact" className="text-black dark:text-white rounded-xl px-2 md:px-14 py-4">
             <h1 className="text-xl font-hanken font-semibold mb-6">Let's Connect</h1>
 
             <p className="text-xs text-neutral-600 dark:text-neutral-400 leading-relaxed mb-6 font-hanken">

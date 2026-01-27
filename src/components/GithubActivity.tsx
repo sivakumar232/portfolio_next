@@ -7,7 +7,7 @@ interface GithubActivityProps {
 
 const GithubActivity: React.FC<GithubActivityProps> = ({ isDarkMode }) => {
     return (
-        <div id="github" className="text-black dark:text-white font-sans dark:bg-black rounded-xl px-14 py-4">
+        <div id="github" className="text-black dark:text-white font-sans dark:bg-black rounded-xl px-2 md:px-14 py-4">
             <h1 className="text-xl font-lato font-semibold text-center sm:text-left">GitHub Activity</h1>
             <div id="github-activity-container" className="mt-3 flex justify-center border px-10 border-dashed py-8  border-neutral-400 hover:border-neutral-600 dark:border-neutral-700 bg-white dark:bg-black text-xs font-semibold font-hanken sm:justify-start overflow-x-auto">
                 <GitHubCalendar
