@@ -4,12 +4,12 @@ import { SiTailwindcss, SiNextdotjs, SiExpress, SiPostgresql, SiMongodb, SiSupab
 
 const Skills: React.FC = () => {
     return (
-        <div id="skills" className="text-black dark:text-white rounded-xl px-6 py-4">
-            <h1 className="text-2xl font-hanken font-semibold mb-6">Skills & Tools</h1>
+        <div id="skills" className="text-black dark:text-white rounded-xl px-14 py-4">
+            <h1 className="text-xl font-hanken font-semibold mb-6">Skills & Tools</h1>
 
-            <div className="flex flex-wrap items-center gap-2">
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-sm font-semibold font-hanken transition-all hover:shadow-md hover:-translate-y-0.5 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-purple-500/20">
-                    <SiTypescript className="text-[#3178C6] text-base" />
+            <div className="flex flex-wrap items-center gap-1.5">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-xs font-semibold font-hanken transition-all hover:shadow-md hover:-translate-y-0.5 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-purple-500/20">
+                    <SiTypescript className="text-[#3178C6] text-sm" />
                     <span className="text-black dark:text-white">TypeScript</span>
                 </div>
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-dashed border-neutral-400 dark:border-neutral-600 bg-white dark:bg-neutral-800 shadow-sm text-sm font-semibold font-hanken transition-all hover:shadow-md hover:-translate-y-0.5 hover:border-purple-400 dark:hover:border-purple-500 hover:shadow-purple-500/20">

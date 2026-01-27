@@ -11,7 +11,7 @@ const Banner: React.FC = () => {
     return (
         <div className="relative rounded-xl overflow-hidden">
             {/* Banner Image */}
-            <div className="h-32 sm:h-48 w-full bg-neutral-200 dark:bg-neutral-800 overflow-hidden relative">
+            <div className="h-32 sm:h-48 w-auto mx-10 bg-neutral-200 dark:bg-neutral-800 overflow-hidden relative rounded-t-xl">
                 {/* Dark Mode Banner */}
                 <div className="hidden dark:block w-full h-full relative">
                     <Image
@@ -36,7 +36,7 @@ const Banner: React.FC = () => {
                 </div>
             </div>
 
-            <div className="px-6 pb-6 relative">
+            <div className="px-14 pb-6 relative">
                 {/* Profile Image - Overlapping */}
                 <div className="-mt-12 sm:-mt-16 mb-4 flex justify-between items-end">
                     <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-neutral-50 dark:border-neutral-900 overflow-hidden bg-white dark:bg-black shadow-sm relative">
@@ -101,7 +101,7 @@ const Banner: React.FC = () => {
 
                 {/* Profile Info */}
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-hanken font-bold mb-0 text-black dark:text-white">
+                    <h1 className="text-2xl md:text-3xl font-hanken font-bold mb-0 text-black dark:text-white">
                         Hi, I'm Siva Kumar
                     </h1>
                 </div>

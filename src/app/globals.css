@@ -287,8 +287,15 @@
 }
 
 ::selection {
-  color: black;
-  background-color: white;
+  background-color: #e5e5e5;
+  /* soft white / neutral-200 */
+  color: #0a0a0a;
+  /* soft black */
+}
+
+::-moz-selection {
+  background-color: #e5e5e5;
+  color: #0a0a0a;
 }
 
 canvas {
