@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { SiLeetcode } from 'react-icons/si';
+import { HiOutlineDocumentText } from 'react-icons/hi2';
 import Image from 'next/image';
 import mobImage from '../assets/mob.jpg';
 import darkBannerImage from '../assets/forest_banner.jpg';
@@ -94,6 +95,17 @@ const Banner: React.FC = () => {
                             <SiLeetcode className="text-xl text-[#fea116]" />
                             <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
                                 LeetCode
+                            </span>
+                        </a>
+                        <a
+                            href="https://drive.google.com/file/d/1uha-bhj3xjK6XHaWR1kJW1l_vqMePLuw/view?usp=sharing"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
+                        >
+                            <HiOutlineDocumentText className="text-xl text-neutral-700 dark:text-neutral-200 group-hover:text-black dark:group-hover:text-white transition-colors" />
+                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+                                Resume
                             </span>
                         </a>
                     </div>
