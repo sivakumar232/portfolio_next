@@ -32,7 +32,7 @@ const VisitorCounter: React.FC = () => {
 
     return (
         <span>
-            visits <span className="text-black dark:text-white font-semibold">#{visits.toLocaleString()}</span>
+            visitors <span className="text-black dark:text-white font-semibold">#{visits.toLocaleString()}</span>
         </span>
     );
 };

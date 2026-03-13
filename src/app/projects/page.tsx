@@ -1,5 +1,6 @@
 import React from 'react';
 import Projects from '@/components/Projects';
+import { useClickSound } from "../../hooks/useClickSound";
 
 export default function ProjectsPage() {
     return (
