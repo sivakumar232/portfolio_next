@@ -98,7 +98,7 @@ const Banner: React.FC = () => {
                             </span>
                         </a>
                         <a
-                            href="https://drive.google.com/file/d/1uha-bhj3xjK6XHaWR1kJW1l_vqMePLuw/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1uha-bhj3xjK6XHaWR1kJW1l_vqMePLuw/view?usp=sharing6"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"

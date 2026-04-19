@@ -27,12 +27,20 @@ const Projects: React.FC<ProjectsProps> = ({ limit }) => {
   };
 
   const projects = [
-{
-      title: "Nebula Sketch",
+    {
+      title: "REVA AI",
       description:
-        "Real-time collaborative drawing platform with WebSocket-driven room isolation, persistent state via Prisma, and low-latency interaction for concurrent edits.",
-      tags: ["Next.js", "React", "Tailwind CSS", "PostgreSQL", "Prisma"],
-      github: "https://github.com/sivakumar232/Nebula-Sketch",
+        "Complaint Intelligence Platform with multilingual voice-to-structured pipeline using Azure Speech + LLMs. Features geospatial routing across 1K+ locations and secure authentication with PII masking.",
+      tags: ["Azure Speech", "LLMs", "PostGIS", "JWT", "S3", "Node.js"],
+      github: "https://github.com/sivakumar232/REVA-AI/",
+      link: null,
+    },
+    {
+      title: "NebulaSketch",
+      description:
+        "Real-time multiplayer drawing game with WebSocket-driven low-latency interaction. Uses Redis for session management and fuzzy matching for guess validation.",
+      tags: ["WebSockets", "Redis", "Node.js", "Canvas API"],
+      github: "https://github.com/sivakumar232/nebulasketch",
       link: null,
     },
     {
