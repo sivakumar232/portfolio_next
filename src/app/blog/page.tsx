@@ -18,7 +18,7 @@ export default function BlogPage() {
                 <div className="grid grid-cols-1 gap-6">
                     {posts.map((post) => (
                         <Link href={`/blog/${post.slug}`} key={post.slug} className="group block">
-                            <article className="p-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg hover:border-neutral-400 dark:hover:border-neutral-600 transition-all">
+                            <article className="p-6 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-lg">
                                 <div className="flex justify-between items-start mb-2">
                                     <h2 className="text-xl font-bold font-hanken text-black dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                         {post.title}

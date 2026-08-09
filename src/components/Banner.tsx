@@ -1,125 +1,34 @@
 import React from 'react';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
-import { SiLeetcode } from 'react-icons/si';
-import { HiOutlineDocumentText } from 'react-icons/hi2';
 import Image from 'next/image';
-import mobImage from '../assets/mob.jpg';
 import darkBannerImage from '../assets/forest_banner.jpg';
 import lightBannerImage from '../assets/light_banner.jpg';
 
-const Banner: React.FC = () => {
+/** Cover image only — full width, no margins, no rounding. Hero.tsx owns avatar/bio below it. */
+export function Banner() {
     return (
-        <div className="relative rounded-xl overflow-hidden">
-            {/* Banner Image */}
-            <div className="h-32 sm:h-48 w-auto mx-2 md:mx-10 bg-neutral-200 dark:bg-neutral-800 overflow-hidden relative rounded-t-xl">
-                {/* Dark Mode Banner */}
-                <div className="hidden dark:block w-full h-full relative">
-                    <Image
-                        src={darkBannerImage}
-                        alt="Cover"
-                        className="object-cover"
-                        fill
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                </div>
-                {/* Light Mode Banner */}
-                <div className="block dark:hidden w-full h-full relative">
-                    <Image
-                        src={lightBannerImage}
-                        alt="Cover"
-                        className="object-cover"
-                        fill
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                </div>
+        <div className="h-28 sm:h-40 w-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative">
+            <div className="hidden dark:block w-full h-full relative">
+                <Image
+                    src={darkBannerImage}
+                    alt="Cover"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="680px"
+                />
             </div>
-
-            <div className="px-2 md:px-14 pb-6 relative">
-                {/* Profile Image - Overlapping */}
-                <div className="-mt-12 sm:-mt-16 mb-4 flex justify-between items-end">
-                    <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-4 border-neutral-50 dark:border-neutral-900 overflow-hidden bg-white dark:bg-black shadow-sm relative">
-                        <Image
-                            src={mobImage}
-                            alt="Profile"
-                            className="object-cover"
-                            fill
-                            priority
-                            sizes="(max-width: 768px) 96px, 128px"
-                        />
-                    </div>
-
-                    {/* Social Links */}
-                    <div className="flex gap-2 mb-1">
-                        <a
-                            href="https://github.com/sivakumar232"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
-                        >
-                            <FaGithub className="text-xl text-neutral-700 dark:text-neutral-200 group-hover:text-black dark:group-hover:text-white transition-colors" />
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                GitHub
-                            </span>
-                        </a>
-                        <a
-                            href="https://www.linkedin.com/in/sivakumarvemuri"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
-                        >
-                            <FaLinkedin className="text-xl text-[#0077b5] dark:text-[#0a66c2]" />
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                LinkedIn
-                            </span>
-                        </a>
-                        <a
-                            href="https://x.com/sivakumarr3105"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
-                        >
-                            <FaXTwitter className="text-xl text-black dark:text-white" />
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                Twitter / X
-                            </span>
-                        </a>
-                        <a
-                            href="https://leetcode.com/u/sivakumarrrrrr2005/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
-                        >
-                            <SiLeetcode className="text-xl text-[#fea116]" />
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded  opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                LeetCode
-                            </span>
-                        </a>
-                        <a
-                            href="https://drive.google.com/file/d/1uha-bhj3xjK6XHaWR1kJW1l_vqMePLuw/view?usp=sharing6"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="relative p-2 bg-white dark:bg-neutral-800 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-700 transition-colors border border-neutral-200 dark:border-neutral-700 group"
-                        >
-                            <HiOutlineDocumentText className="text-xl text-neutral-700 dark:text-neutral-200 group-hover:text-black dark:group-hover:text-white transition-colors" />
-                            <span className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black dark:bg-white text-white dark:text-black text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-                                Resume
-                            </span>
-                        </a>
-                    </div>
-                </div>
-
-                {/* Profile Info */}
-                <div>
-                    <h1 className="text-2xl md:text-3xl font-hanken font-bold mb-0 text-black dark:text-white">
-                        Hi, I'm Siva Kumar
-                    </h1>
-                </div>
+            <div className="block dark:hidden w-full h-full relative">
+                <Image
+                    src={lightBannerImage}
+                    alt="Cover"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="680px"
+                />
             </div>
         </div>
     );
-};
+}
 
 export default Banner;

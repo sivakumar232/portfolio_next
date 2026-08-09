@@ -1,46 +1,42 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import GitHubCalendar from 'react-github-calendar';
+import { useTheme } from 'next-themes';
 
-interface GithubActivityProps {
-    isDarkMode: boolean;
-}
+const GithubActivity: React.FC = () => {
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
 
-const GithubActivity: React.FC<GithubActivityProps> = ({ isDarkMode }) => {
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    const isDark = resolvedTheme === 'dark';
+
     return (
-        <div id="github" className="text-black dark:text-white font-sans dark:bg-black rounded-xl px-2 md:px-14 py-4">
-            <h1 className="text-xl font-lato font-semibold text-center sm:text-left">GitHub Activity</h1>
-            <div id="github-activity-container" className="mt-3 flex justify-center border rounded-xl px-10 border-dashed py-8  border-neutral-400 hover:border-neutral-600 dark:border-neutral-700 bg-white dark:bg-black text-xs font-semibold font-hanken sm:justify-start overflow-x-auto">
-                <GitHubCalendar
-                    username="sivakumar232"
-                    blockSize={11}
-                    blockMargin={4}
-                    fontSize={14}
-                    theme={{
-                        light: [
-                            '#ffffff',
-                            '#f0ecff',
-                            '#d9d2ff',
-                            '#a78bfa',
-                            '#5b21b6',
-                        ],
-                        dark: [
-                            '#000000',
-                            '#221633', '#3b1d6f',
-                            '#7c3aed',
-                            '#e9d5ff',
-                        ],
-                    }}
-
-
-
-                    colorScheme={isDarkMode ? 'dark' : 'light'}
-                    style={{
-                        color: isDarkMode ? '#fff' : '#000'
-                    }}
-                />
+        <div id="github">
+            <div className="overflow-x-auto rounded-xl  border-zinc-900 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-4">
+                {mounted ? (
+                    <GitHubCalendar
+                        username="sivakumar232"
+                        blockSize={11}
+                        blockMargin={4}
+                        fontSize={12}
+                        theme={{
+                            light: ['#f4f4f5', '#e4e4e7', '#a1a1aa', '#71717a', '#18181b'],
+                            dark: ['#18181b', '#27272a', '#52525b', '#a1a1aa', '#e4e4e7'],
+                        }}
+                        colorScheme={isDark ? 'dark' : 'light'}
+                        style={{ color: isDark ? '#a1a1aa' : '#52525b' }}
+                    />
+                ) : (
+                    <div className="h-[120px] w-full animate-pulse bg-zinc-100 dark:bg-zinc-900/50 rounded-lg" />
+                )}
             </div>
         </div>
     );
 };
 
 export default GithubActivity;
+

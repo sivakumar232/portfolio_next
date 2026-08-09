@@ -3,10 +3,10 @@
 import React, { useState, useEffect } from 'react';
 
 const SectionNav: React.FC = () => {
-    const [activeSection, setActiveSection] = useState<string>('about');
+    const [activeSection, setActiveSection] = useState<string>('education');
 
     const sections = [
-        { id: 'about', label: 'About' },
+        { id: 'education', label: 'Education' },
         { id: 'projects', label: 'Projects' },
         { id: 'skills', label: 'Skills' },
         { id: 'contact', label: 'Contact' },

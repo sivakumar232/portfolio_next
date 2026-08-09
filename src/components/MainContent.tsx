@@ -6,7 +6,7 @@ import OnekoLoader from './Onekoloader';
 import VisitorCounter from './VisitorCounter';
 import DarkThemeToggle from './DarkThemeToggle';
 import Banner from './Banner';
-import About from './About';
+import Education from './Education';
 import Projects from './Projects';
 import Skills from './Skills';
 import GithubActivity from './GithubActivity';
@@ -80,30 +80,64 @@ const MainContent: React.FC = () => {
                 <DarkThemeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
             </div>
 
-            <div className="px-4 py-8 space-y-2 pt-8" style={{ maxWidth: '832px', margin: '0 auto' }}>
+            {/* ── Banner (no top border, flush to page top) ── */}
+            <div>
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Banner />
+                </div>
+            </div>
 
-                <Banner />
+            {/* ── Education ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Education />
+                </div>
+            </div>
 
-                <About />
+            {/* ── Projects ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Projects limit={2} />
+                </div>
+            </div>
 
-                <Projects limit={2} />
+            {/* ── Skills ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Skills />
+                </div>
+            </div>
 
-                <Skills />
+            {/* ── GitHub Activity ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <GithubActivity />
+                </div>
+            </div>
 
-                <GithubActivity isDarkMode={isDarkMode} />
+            {/* ── Contact ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Contact />
+                </div>
+            </div>
 
-                <Contact />
+            {/* ── Quotes ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700">
+                    <Quotes />
+                </div>
+            </div>
 
-                <Quotes />
-
-                {/* Footer */}
-                <div className="w-full flex justify-between items-center border-t border-neutral-300 dark:border-neutral-700 py-4 text-sm">
+            {/* ── Footer ── */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700 px-4 py-3 flex justify-between items-center text-xs">
                     <div className="text-left">
                         <div>
                             <span className="text-neutral-500 dark:text-neutral-500">Designed and Developed by </span>
                             <span className="font-bold text-black dark:text-white">Siva Kumar</span>
                         </div>
-                        <div className="text-neutral-500 dark:text-neutral-500 text-xs mt-1">
+                        <div className="text-neutral-500 dark:text-neutral-500 text-xs mt-0.5">
                             &copy; {new Date().getFullYear()} All rights reserved.
                         </div>
                     </div>
@@ -117,19 +151,23 @@ const MainContent: React.FC = () => {
                                     {time.getHours() % 12 || 12}:{time.getMinutes().toString().padStart(2, '0')} {time.getHours() >= 12 ? 'PM' : 'AM'}
                                 </>
                             ) : (
-                                // Placeholder for server-side render / initial client render
                                 <span>--:-- --</span>
                             )}
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </div >
+            {/* Bottom border — closes the column */}
+            <div className="border-t border-dashed border-neutral-300 dark:border-neutral-700">
+                <div className="max-w-[680px] mx-auto border-x border-dashed border-neutral-300 dark:border-neutral-700 h-4" />
+            </div>
 
             {/* Oneko Cat Animation */}
-            < OnekoLoader />
-        </div >
+            <OnekoLoader />
+        </div>
     );
 };
 
 export default MainContent;
+

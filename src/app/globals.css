@@ -1,6 +1,31 @@
 @import "tailwindcss";
 @variant dark (&:where(.dark, .dark *));
 
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.border-dashed-h {
+  mask-image: repeating-linear-gradient(to right, black 0, black 1px, transparent 1px, transparent 6px);
+  -webkit-mask-image: repeating-linear-gradient(to right, black 0, black 1px, transparent 1px, transparent 6px);
+}
+
+.border-dashed-v {
+  mask-image: repeating-linear-gradient(to bottom, black 0, black 1px, transparent 1px, transparent 6px);
+  -webkit-mask-image: repeating-linear-gradient(to bottom, black 0, black 1px, transparent 1px, transparent 6px);
+}
+
 /* Quote Fade In Animation */
 @keyframes fadeIn {
   from {

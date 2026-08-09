@@ -1,94 +1,38 @@
+'use client';
+
 import React, { useState, useEffect } from 'react';
 import { FaQuoteLeft } from 'react-icons/fa';
 
-interface Quote {
-    text: string;
-    author: string;
-}
+const quotes = [
+    { text: 'Man is made by his belief. As he believes, so he is.', author: 'Bhagavad Gita' },
+    { text: 'The mind can be your friend or your enemy.', author: 'Bhagavad Gita' },
+    { text: 'A person is elevated by the self, and degraded by the self.', author: 'Bhagavad Gita' },
+    { text: 'One who has faith attains wisdom.', author: 'Bhagavad Gita' },
+    { text: 'You become what you constantly think about.', author: 'Bhagavad Gita' },
+    { text: 'Act without attachment, and you will be free.', author: 'Bhagavad Gita' },
+    { text: 'You are what your deepest desire is.', author: 'Upanishads' },
+    { text: 'As the mind is, so is the person.', author: 'Upanishads' },
+    { text: 'When the self is known, all is known.', author: 'Upanishads' },
+    { text: 'The self is the witness of all thoughts.', author: 'Upanishads' },
+    { text: 'From truth, wisdom arises.', author: 'Upanishads' },
+];
 
 const Quotes: React.FC = () => {
-    const quotes: Quote[] = [
-        // Bhagavad Gita – belief, mind, karma
-        {
-            text: "Man is made by his belief. As he believes, so he is.",
-            author: "Bhagavad Gita"
-        },
-        {
-            text: "The mind can be your friend or your enemy.",
-            author: "Bhagavad Gita"
-        },
-        {
-            text: "A person is elevated by the self, and degraded by the self.",
-            author: "Bhagavad Gita"
-        },
-        {
-            text: "One who has faith attains wisdom.",
-            author: "Bhagavad Gita"
-        },
-        {
-            text: "You become what you constantly think about.",
-            author: "Bhagavad Gita"
-        },
-        {
-            text: "Act without attachment, and you will be free.",
-            author: "Bhagavad Gita"
-        },
-
-        // Upanishads – self, consciousness, truth
-        {
-            text: "You are what your deepest desire is.",
-            author: "Upanishads"
-        },
-        {
-            text: "As the mind is, so is the person.",
-            author: "Upanishads"
-        },
-        {
-            text: "When the self is known, all is known.",
-            author: "Upanishads"
-        },
-        {
-            text: "The self is the witness of all thoughts.",
-            author: "Upanishads"
-        },
-        {
-            text: "From truth, wisdom arises.",
-            author: "Upanishads"
-        }
-    ];
-
-    const [currentQuote, setCurrentQuote] = useState<number>(0);
-    const [mounted, setMounted] = useState(false);
+    const [current, setCurrent] = useState(0);
 
     useEffect(() => {
-        setMounted(true);
-        // Select a random quote only on client-side mount
-        setCurrentQuote(Math.floor(Math.random() * quotes.length));
+        setCurrent(Math.floor(Math.random() * quotes.length));
     }, []);
 
-    // No auto-rotation - quote only changes on page refresh or manual click
-
     return (
-        <div className="px-2 md:px-14 py-4 ">
-            <div className="text-black border border-neutral-400 rounded-xl group hover:border-neutral-600 dark:border-neutral-700 border-dashed dark:text-white  px-6 py-4">
-                <div className="max-w-3xl mx-auto text-center">
-                    <FaQuoteLeft className="text-6xl text-neutral-400  transition-all duration-400 ease-in ease-out group-hover:text-neutral-900 dark:group-hover:text-white dark:text-neutral-500 dark:text-neutral-600 mx-auto " />
-
-                    <div className="relative min-h-[120px] flex items-center justify-center">
-                        <div
-                            key={currentQuote}
-                            className="animate-[fadeIn_0.5s_ease-in-out]"
-                        >
-                            <p className="text-lg md:text-xl font-hanken font-medium leading-relaxed mb-4 text-neutral-600 dark:text-neutral-300">
-                                "{quotes[currentQuote].text}"
-                            </p>
-                            <p className="text-sm font-hanken text-neutral-500 dark:text-neutral-500">
-                                — {quotes[currentQuote].author}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="border border-zinc-200 dark:border-zinc-800 rounded-xl px-6 py-5 text-center group">
+            <FaQuoteLeft className="text-zinc-300 dark:text-zinc-700 text-2xl mx-auto mb-4 group-hover:text-zinc-500 dark:group-hover:text-zinc-400 transition-colors" />
+            <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-2 font-medium">
+                &ldquo;{quotes[current].text}&rdquo;
+            </p>
+            <p className="text-xs text-zinc-400 dark:text-zinc-600">
+                — {quotes[current].author}
+            </p>
         </div>
     );
 };
