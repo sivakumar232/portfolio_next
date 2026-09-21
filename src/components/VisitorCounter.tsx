@@ -15,15 +15,17 @@ const VisitorCounter: React.FC = () => {
             fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
                 .then((res) => res.json())
                 .then((data) => {
-                    setVisits(data.count);
-                    localStorage.setItem('visit_counted', 'true');
+                    if (typeof data.count === 'number') {
+                        setVisits(data.count);
+                        localStorage.setItem('visit_counted', 'true');
+                    }
                 })
                 .catch((err) => console.error("Counter Error:", err));
         } else {
             // Returning visitor: Just get the current count without incrementing
             fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/`)
                 .then((res) => res.json())
-                .then((data) => setVisits(data.count))
+                .then((data) => { if (typeof data.count === 'number') setVisits(data.count); })
                 .catch((err) => console.error("Counter Error:", err));
         }
     }, []);

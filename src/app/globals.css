@@ -246,6 +246,7 @@ body {
 }
 
 @theme {
+  --font-hanken: var(--font-hanken), "Hanken Grotesk", "sans-serif";
   --font-banger: Bangers;
   --font-raleway: Raleway, "sans-serif";
   --font-bebas_neue: Bebas_Neue, "sans-serif";

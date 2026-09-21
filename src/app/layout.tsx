@@ -1,29 +1,30 @@
 import type { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
+import { Hanken_Grotesk } from 'next/font/google';
 import './globals.css';
 
+const hankenGrotesk = Hanken_Grotesk({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '600', '700'],
+    variable: '--font-hanken',
+    display: 'swap',
+});
+
 export const metadata: Metadata = {
-    title: 'Siva Kumar — Full Stack Developer',
-    description: 'Portfolio of Siva Kumar — Full-stack developer building scalable web applications with React, Next.js, TypeScript, and Node.js.',
+    title: 'Siva Kumar — AI Engineer',
+    description: 'Portfolio of Siva Kumar — AI Engineer specializing in AI agents, agentic workflows, and scalable AI applications.',
     icons: { icon: '/favicon.png' },
     openGraph: {
-        title: 'Siva Kumar — Full Stack Developer',
-        description: 'Full-stack developer building scalable, production-ready web apps.',
+        title: 'Siva Kumar — AI Engineer',
+        description: 'AI Engineer specializing in AI agents, agentic workflows, and shipping production AI applications.',
         type: 'website',
     },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <head>
-                <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap"
-                    rel="stylesheet"
-                />
-            </head>
+        <html lang="en" suppressHydrationWarning className={hankenGrotesk.variable}>
+            <head />
             <body className="antialiased bg-white dark:bg-black text-zinc-900 dark:text-zinc-100 transition-colors duration-300">
                 <ThemeProvider
                     attribute="class"

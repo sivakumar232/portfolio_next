@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 
 const navLinks = [
@@ -13,10 +13,16 @@ const navLinks = [
 export function TopNav() {
     const [scrolled, setScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState<string>('');
-    const { theme, setTheme, resolvedTheme } = useTheme();
+    const { setTheme, resolvedTheme } = useTheme();
+    const mountedRef = useRef(false);
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => { setMounted(true); }, []);
+    useEffect(() => {
+        if (!mountedRef.current) {
+            mountedRef.current = true;
+            setMounted(true);
+        }
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -42,11 +48,7 @@ export function TopNav() {
     return (
         <nav className="fixed top-3 left-1/2 -translate-x-1/2 z-[100] pointer-events-auto">
             <div
-                className={`flex items-center gap-4 px-4 py-2 rounded-full transition-all duration-300 ${
-                    scrolled
-                        ? 'bg-white/80 dark:bg-zinc-950/80 backdrop-blur-md shadow-sm border border-zinc-200/80 dark:border-zinc-800/80'
-                        : 'bg-transparent border border-transparent'
-                }`}
+                className={`flex items-center gap-4 px-4 py-2 rounded-xl transition-all duration-300 bg-white/10 dark:bg-zinc-950/10 backdrop-blur-md border border-white/20 dark:border-zinc-700/30 ${scrolled ? 'shadow-sm' : ''}`}
             >
                 {navLinks.map(({ label, href }) => {
                     const isActive = activeSection === href.slice(1);

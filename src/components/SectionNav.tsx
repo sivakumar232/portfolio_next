@@ -2,15 +2,15 @@
 
 import React, { useState, useEffect } from 'react';
 
+const sections = [
+    { id: 'education', label: 'Education' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'contact', label: 'Contact' },
+];
+
 const SectionNav: React.FC = () => {
     const [activeSection, setActiveSection] = useState<string>('education');
-
-    const sections = [
-        { id: 'education', label: 'Education' },
-        { id: 'projects', label: 'Projects' },
-        { id: 'skills', label: 'Skills' },
-        { id: 'contact', label: 'Contact' },
-    ];
 
     useEffect(() => {
         let ticking = false;

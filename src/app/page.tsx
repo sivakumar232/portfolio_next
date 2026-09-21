@@ -31,7 +31,7 @@ export default function Home() {
             <div className="absolute top-0 bottom-0 right-[30%] w-0 border-r border-solid border-zinc-400 dark:border-zinc-700 border-dashed-v pointer-events-none hidden md:block" />
 
             {/* ── Centered Content Flow Column (40% width) ── */}
-            <div className="ml-0 mr-0 md:ml-[30%] md:mr-[30%] pt-16 pb-0 px-5 flex flex-col z-10 relative min-h-screen">
+            <div className="ml-0 mr-0 md:ml-[30%] md:mr-[30%] pt-16 pb-20 sm:pb-28 px-5 flex flex-col z-10 relative min-h-screen">
                 
                 {/* ── Banner + Hero: uses negative margins to span exactly to the vertical lines ── */}
                 <div className="relative -mx-5">

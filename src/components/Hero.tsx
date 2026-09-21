@@ -25,13 +25,13 @@ export function Hero() {
                 Siva Kumar
             </h1>
             <p className="text-xs text-zinc-500 dark:text-zinc-500 mb-3">
-                Full-stack Developer · India
+                AI Engineer · India
             </p>
 
             {/* Bio */}
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
-                I build scalable, production-ready web apps. Currently going deeper into backend systems,
-                DevOps, and impactful side projects.{' '}
+                Building intelligent systems, fine-tuning LLMs, and shipping production AI applications.
+                Specializing in AI agents, agentic workflows, and scalable architectures.{' '}
                 <span className="text-zinc-900 dark:text-zinc-200 font-medium">Open to collaborate.</span>
             </p>
 
