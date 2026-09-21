@@ -5,7 +5,7 @@ import { socials } from '../data/socials';
 
 export function Hero() {
     return (
-        <div className="px-4 pb-5 pt-0">
+        <div className="pb-6 pt-0">
             {/* Avatar row */}
             <div className="flex mb-4">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white dark:border-zinc-950 overflow-hidden relative shadow-sm -mt-8 sm:-mt-10">
@@ -21,10 +21,10 @@ export function Hero() {
             </div>
 
             {/* Name + subtitle */}
-            <h1 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-0.5">
+            <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                 Siva Kumar
             </h1>
-            <p className="text-xs text-zinc-500 dark:text-zinc-500 mb-3">
+            <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5 mb-3">
                 AI Engineer · India
             </p>
 
@@ -37,7 +37,7 @@ export function Hero() {
 
             {/* Socials section */}
             <div className="mt-5">
-                <h2 className="text-[10px] font-mono tracking-widest uppercase text-zinc-700 dark:text-zinc-500 mb-2.5">
+                <h2 className="text-[11px] font-mono tracking-wider uppercase text-zinc-500 dark:text-zinc-400 mb-2.5">
                     Here are my <span className="font-bold text-zinc-900 dark:text-zinc-100">socials</span>
                 </h2>
                 <div className="flex flex-wrap gap-2">

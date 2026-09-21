@@ -15,8 +15,8 @@ const GithubActivity: React.FC = () => {
     const isDark = resolvedTheme === 'dark';
 
     return (
-        <div id="github">
-            <div className="overflow-x-auto rounded-xl  border-zinc-900 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-4">
+        <div>
+            <div className="overflow-x-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 px-4 py-4">
                 {mounted ? (
                     <GitHubCalendar
                         username="sivakumar232"

@@ -4,7 +4,7 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 const Contact: React.FC = () => {
     return (
-        <div id="contact">
+        <div>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed mb-5">
                 I&apos;m always open to new projects, creative ideas, or opportunities. Feel free to reach out.
             </p>
@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
                 href="https://cal.com/siva-kumar-vdv1fl/15min"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 mb-5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-semibold rounded-lg hover:opacity-90 transition-opacity"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-4 py-2 mb-5 bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-xs font-semibold rounded-lg hover:opacity-90 transition-opacity"
             >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />

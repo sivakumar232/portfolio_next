@@ -5,7 +5,7 @@ import { useClickSound } from "../../hooks/useClickSound";
 export default function ProjectsPage() {
     return (
         <div className="min-h-screen bg-white dark:bg-black bg-no-repeat bg-center bg-fixed transition-colors duration-300 relative bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]">
-            <div className="px-4 py-8" style={{ maxWidth: '832px', margin: '0 auto' }}>
+            <div className="px-4 sm:px-6 py-6 sm:py-8 pb-16" style={{ maxWidth: '832px', margin: '0 auto' }}>
                 <a
                     href="/"
                     className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors "

@@ -3,7 +3,7 @@ import { skills } from '../data/skills';
 
 export function Skills() {
     return (
-        <div id="skills">
+        <div>
             <div className="flex flex-wrap gap-1.5">
                 {skills.map(({ name, icon: Icon, color }) => (
                     <div

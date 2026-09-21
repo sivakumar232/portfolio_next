@@ -6,7 +6,7 @@ import lightBannerImage from '../assets/light_banner.jpg';
 /** Cover image only — full width, no margins, no rounding. Hero.tsx owns avatar/bio below it. */
 export function Banner() {
     return (
-        <div className="h-28 sm:h-40 w-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative">
+        <div className="h-32 sm:h-44 w-full rounded-xl sm:rounded-2xl bg-zinc-200 dark:bg-zinc-800 overflow-hidden relative border border-zinc-200/80 dark:border-zinc-800/80">
             <div className="hidden dark:block w-full h-full relative">
                 <Image
                     src={darkBannerImage}

@@ -39,6 +39,48 @@ body {
   }
 }
 
+/* Shiny Text Animation */
+@keyframes shiny-text {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.shiny-text {
+  background: linear-gradient(
+    110deg,
+    #52525b 0%,
+    #52525b 35%,
+    #09090b 50%,
+    #52525b 65%,
+    #52525b 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-text 4.5s linear infinite;
+}
+
+.dark .shiny-text {
+  background: linear-gradient(
+    110deg,
+    #a1a1aa 0%,
+    #a1a1aa 35%,
+    #ffffff 50%,
+    #a1a1aa 65%,
+    #a1a1aa 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shiny-text 4.5s linear infinite;
+}
+
 /* Custom Scrollbar for GitHub Activity */
 #github-activity-container {
   scrollbar-width: thin;

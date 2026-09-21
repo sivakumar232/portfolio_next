@@ -15,12 +15,9 @@ export function Projects({ limit }: ProjectsProps) {
     const displayed = limit ? projects.slice(0, limit) : projects;
 
     return (
-        <div id="projects">
+        <div>
             <div className="relative">
-                {/* Vertical dashed line in between 2 projects */}
-                <div className="absolute top-0 bottom-[-4px] left-1/2 w-0 border-r border-solid border-zinc-400 dark:border-zinc-700 border-dashed-v -translate-x-1/2 pointer-events-none" />
-
-                <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {displayed.map((project) => (
                         <div
                             key={project.title}
