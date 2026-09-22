@@ -13,7 +13,13 @@ import VisitorCounter from '@/components/VisitorCounter';
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-white dark:bg-black relative transition-colors duration-300">
+        <div className="min-h-screen bg-white dark:bg-black relative transition-colors duration-300 overflow-x-hidden">
+
+            {/* Subtle ambient light depth for glassmorphism */}
+            <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[550px] h-[320px] bg-gradient-to-b from-zinc-200/50 to-transparent dark:from-zinc-800/25 dark:to-transparent rounded-full blur-3xl" />
+                <div className="absolute top-[60%] left-1/2 -translate-x-1/2 w-[500px] h-[280px] bg-gradient-to-t from-zinc-200/40 to-transparent dark:from-zinc-800/20 dark:to-transparent rounded-full blur-3xl" />
+            </div>
 
             {/* Fixed navbar */}
             <TopNav />

@@ -44,20 +44,19 @@ body {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
 }
 
 .shiny-text {
-  background: linear-gradient(
-    110deg,
-    #52525b 0%,
-    #52525b 35%,
-    #09090b 50%,
-    #52525b 65%,
-    #52525b 100%
-  );
+  background: linear-gradient(110deg,
+      #52525b 0%,
+      #52525b 35%,
+      #09090b 50%,
+      #52525b 65%,
+      #52525b 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -66,14 +65,12 @@ body {
 }
 
 .dark .shiny-text {
-  background: linear-gradient(
-    110deg,
-    #a1a1aa 0%,
-    #a1a1aa 35%,
-    #ffffff 50%,
-    #a1a1aa 65%,
-    #a1a1aa 100%
-  );
+  background: linear-gradient(110deg,
+      #a1a1aa 0%,
+      #a1a1aa 35%,
+      #ffffff 50%,
+      #a1a1aa 65%,
+      #a1a1aa 100%);
   background-size: 200% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -81,41 +78,30 @@ body {
   animation: shiny-text 4.5s linear infinite;
 }
 
-/* Custom Scrollbar for GitHub Activity */
-#github-activity-container {
-  scrollbar-width: thin;
-  scrollbar-color: #d1d5db transparent;
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(228, 228, 231, 0.8);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.04),
+    inset 0 1px 1px rgba(255, 255, 255, 0.9),
+    0 8px 30px -4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#github-activity-container::-webkit-scrollbar {
-  height: 8px;
+.dark .glass-panel {
+  background: rgba(9, 9, 11, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    inset 0 2px 8px 1px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 12px 36px -4px rgba(0, 0, 0, 0.45);
 }
 
-#github-activity-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-#github-activity-container::-webkit-scrollbar-thumb {
-  background-color: #d1d5db;
-  border-radius: 4px;
-}
-
-#github-activity-container::-webkit-scrollbar-thumb:hover {
-  background-color: #000;
-}
-
-/* Dark mode scrollbar */
-.dark #github-activity-container {
-  scrollbar-color: #4b5563 transparent;
-}
-
-.dark #github-activity-container::-webkit-scrollbar-thumb {
-  background-color: #4b5563;
-}
-
-.dark #github-activity-container::-webkit-scrollbar-thumb:hover {
-  background-color: #000;
-}
 
 /* Raleway */
 @font-face {
@@ -355,7 +341,7 @@ body {
 }
 
 ::selection {
-  background-color: #e5e5e5;
+  background-color: #FF69B4;
   /* soft white / neutral-200 */
   color: #0a0a0a;
   /* soft black */
@@ -371,49 +357,4 @@ canvas {
   position: fixed !important;
   pointer-events: none;
   z-index: 9999;
-}
-
-/* Hide scrollbar in GitHub Calendar by default, show on hover */
-.react-activity-calendar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-x: auto;
-}
-
-.react-activity-calendar::-webkit-scrollbar {
-  height: 6px;
-}
-
-.react-activity-calendar::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.react-activity-calendar::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 3px;
-}
-
-.react-activity-calendar:hover {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
-}
-
-.dark .react-activity-calendar:hover {
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-}
-
-.react-activity-calendar:hover::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.dark .react-activity-calendar:hover::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.react-activity-calendar:hover::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.dark .react-activity-calendar:hover::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
 }

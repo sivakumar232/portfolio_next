@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import WarmTooltip, { WarmTooltipGroup } from './WarmTooltip';
 
 const Contact: React.FC = () => {
     return (
@@ -33,24 +34,35 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Social links */}
-            <div className="flex gap-2">
-                {[
-                    { href: 'https://github.com/sivakumar232', icon: FaGithub, label: 'GitHub' },
-                    { href: 'https://www.linkedin.com/in/sivakumarvemuri', icon: FaLinkedin, label: 'LinkedIn' },
-                    { href: 'https://x.com/sivakumarr3105', icon: FaXTwitter, label: 'Twitter' },
-                ].map(({ href, icon: Icon, label }) => (
-                    <a
-                        key={label}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={label}
-                        className="p-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 group"
-                    >
-                        <Icon className="w-4 h-4 text-zinc-600 dark:text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
-                    </a>
-                ))}
-            </div>
+            <WarmTooltipGroup delay={250} warmWindow={300} travel={280}>
+                <div className="flex items-center gap-2 pt-1">
+                    {[
+                        { href: 'https://github.com/sivakumar232', icon: FaGithub, label: 'GitHub' },
+                        { href: 'https://www.linkedin.com/in/sivakumarvemuri', icon: FaLinkedin, label: 'LinkedIn' },
+                        { href: 'https://x.com/sivakumarr3105', icon: FaXTwitter, label: 'Twitter / X' },
+                    ].map(({ href, icon: Icon, label }) => (
+                        <WarmTooltip
+                            key={label}
+                            content={label}
+                            side="top"
+                            size="sm"
+                            radius={6}
+                            gap={8}
+                            arrow
+                        >
+                            <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label}
+                                className="p-1.5 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                            >
+                                <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+                            </a>
+                        </WarmTooltip>
+                    ))}
+                </div>
+            </WarmTooltipGroup>
         </div>
     );
 };
