@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  font-family: var(--font-gt-flexa), "GT Flexa", sans-serif;
   max-width: 100%;
   margin: 0;
   padding: 0;
@@ -274,14 +275,19 @@ body {
 }
 
 @theme {
-  --font-hanken: var(--font-hanken), "Hanken Grotesk", "sans-serif";
+  --font-sans: var(--font-gt-flexa), "GT Flexa", sans-serif;
+  --font-mono: var(--font-gt-flexa-mono), "GT Flexa Mono", monospace;
+  --font-gt-flexa: var(--font-gt-flexa), "GT Flexa", sans-serif;
+  --font-gt-flexa-mono: var(--font-gt-flexa-mono), "GT Flexa Mono", monospace;
+  --font-gt-eesti: var(--font-gt-flexa), "GT Flexa", sans-serif;
+  --font-hanken: var(--font-gt-flexa), "GT Flexa", sans-serif;
   --font-banger: Bangers;
   --font-raleway: Raleway, "sans-serif";
   --font-bebas_neue: Bebas_Neue, "sans-serif";
   --font-montserrat: Montserrat, "sans-serif";
   --font-lato: Lato, "sans-serif";
   --font-roboto: Roboto, "sans-serif";
-  --font-roboto-mono: "Roboto Mono", "monospace";
+  --font-roboto-mono: var(--font-gt-flexa-mono), "GT Flexa Mono", monospace;
   --font-ubuntu: Ubuntu, "sans-serif";
   --font-orbitron: Orbitron, "monospace";
 }

@@ -39,39 +39,39 @@ const GithubActivity: React.FC = () => {
     const [openPRs, setOpenPRs] = useState(true);
 
     return (
-        <div className="w-full text-zinc-900 dark:text-zinc-100 font-sans">
+        <div className="w-full text-neutral-900 dark:text-neutral-100 font-sans">
             {/* ── Month & Year Header ── */}
             <div className="flex items-center gap-3 mb-6">
                 <div className="flex items-baseline gap-1.5 shrink-0">
-                    <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+                    <span className="text-sm font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
                         September
                     </span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                    <span className="text-xs text-neutral-500 dark:text-neutral-400 font-mono">
                         2026
                     </span>
                 </div>
-                <div className="h-[1px] w-full bg-zinc-200 dark:bg-zinc-800" />
+                <div className="h-[1px] w-full bg-neutral-200 dark:bg-neutral-800" />
             </div>
 
             {/* ── Vertical Timeline Container ── */}
-            <div className="relative pl-7 sm:pl-9 ml-3 sm:ml-4 border-l-2 border-zinc-200 dark:border-zinc-800 space-y-7 pb-2">
+            <div className="relative pl-7 sm:pl-9 ml-3 sm:ml-4 border-l-2 border-neutral-200 dark:border-neutral-800 space-y-7 pb-2">
 
                 {/* ── Event 1: Commits ── */}
                 <div className="relative">
                     {/* Circle Node Icon */}
-                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 flex items-center justify-center text-zinc-500 dark:text-zinc-400 shadow-xs">
+                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 flex items-center justify-center text-neutral-500 dark:text-neutral-400 shadow-xs">
                         <CommitIcon />
                     </div>
 
                     {/* Event Header */}
                     <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                        <h3 className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                             Created 39 commits in 2 repositories
                         </h3>
                         <button
                             onClick={() => setOpenCommits(!openCommits)}
                             aria-label="Toggle commits"
-                            className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 p-1 cursor-pointer transition-colors"
+                            className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 p-1 cursor-pointer transition-colors"
                         >
                             <CollapseIcon />
                         </button>
@@ -87,16 +87,16 @@ const GithubActivity: React.FC = () => {
                                         href="https://github.com/sivakumar232/clg-chatbot"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline font-medium truncate"
+                                        className="text-neutral-900 dark:text-neutral-100 hover:underline font-medium truncate"
                                     >
                                         sivakumar232/clg-chatbot
                                     </a>
-                                    <span className="text-zinc-400 dark:text-zinc-500 whitespace-nowrap text-[11px] font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 whitespace-nowrap text-xs font-mono">
                                         37 commits
                                     </span>
                                 </div>
-                                <div className="w-28 sm:w-44 h-1.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800 rounded-full overflow-hidden shrink-0">
-                                    <div className="w-[95%] h-full bg-zinc-800 dark:bg-zinc-200 rounded-full" />
+                                <div className="w-28 sm:w-44 h-1.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/50 dark:border-neutral-800 rounded-full overflow-hidden shrink-0">
+                                    <div className="w-[95%] h-full bg-neutral-800 dark:bg-neutral-200 rounded-full" />
                                 </div>
                             </div>
 
@@ -107,16 +107,16 @@ const GithubActivity: React.FC = () => {
                                         href="https://github.com/sivakumar232/portfolio_next"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline font-medium truncate"
+                                        className="text-neutral-900 dark:text-neutral-100 hover:underline font-medium truncate"
                                     >
                                         sivakumar232/portfolio_next
                                     </a>
-                                    <span className="text-zinc-400 dark:text-zinc-500 whitespace-nowrap text-[11px] font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 whitespace-nowrap text-xs font-mono">
                                         2 commits
                                     </span>
                                 </div>
-                                <div className="w-28 sm:w-44 h-1.5 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200/50 dark:border-zinc-800 rounded-full overflow-hidden shrink-0">
-                                    <div className="w-[12%] h-full bg-zinc-500 dark:bg-zinc-400 rounded-full" />
+                                <div className="w-28 sm:w-44 h-1.5 bg-neutral-100 dark:bg-neutral-900 border border-neutral-200/50 dark:border-neutral-800 rounded-full overflow-hidden shrink-0">
+                                    <div className="w-[12%] h-full bg-neutral-500 dark:bg-neutral-400 rounded-full" />
                                 </div>
                             </div>
                         </div>
@@ -126,19 +126,19 @@ const GithubActivity: React.FC = () => {
                 {/* ── Event 2: Created Repository ── */}
                 <div className="relative">
                     {/* Circle Node Icon */}
-                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 flex items-center justify-center text-zinc-500 dark:text-zinc-400 shadow-xs">
+                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 flex items-center justify-center text-neutral-500 dark:text-neutral-400 shadow-xs">
                         <RepoIcon />
                     </div>
 
                     {/* Event Header */}
                     <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                        <h3 className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                             Created 1 repository
                         </h3>
                         <button
                             onClick={() => setOpenRepos(!openRepos)}
                             aria-label="Toggle repositories"
-                            className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 p-1 cursor-pointer transition-colors"
+                            className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 p-1 cursor-pointer transition-colors"
                         >
                             <CollapseIcon />
                         </button>
@@ -148,25 +148,25 @@ const GithubActivity: React.FC = () => {
                     {openRepos && (
                         <div className="mt-3 flex items-center justify-between text-xs">
                             <div className="flex items-center gap-2 min-w-0">
-                                <span className="text-zinc-400 dark:text-zinc-500">
+                                <span className="text-neutral-500 dark:text-neutral-400">
                                     <RepoIcon />
                                 </span>
                                 <a
                                     href="https://github.com/sivakumar232/clg-chatbot"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline font-medium truncate"
+                                    className="text-neutral-900 dark:text-neutral-100 hover:underline font-medium truncate"
                                 >
                                     sivakumar232/clg-chatbot
                                 </a>
                             </div>
 
-                            <div className="flex items-center gap-3 text-zinc-500 dark:text-zinc-400 shrink-0 text-xs font-mono">
+                            <div className="flex items-center gap-3 text-neutral-500 dark:text-neutral-400 shrink-0 text-xs font-mono">
                                 <div className="flex items-center gap-1.5">
-                                    <span className="w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-500" />
+                                    <span className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-500" />
                                     <span>Python</span>
                                 </div>
-                                <span className="text-zinc-400 dark:text-zinc-500">Sep 4</span>
+                                <span className="text-neutral-500 dark:text-neutral-400">Sep 4</span>
                             </div>
                         </div>
                     )}
@@ -175,19 +175,19 @@ const GithubActivity: React.FC = () => {
                 {/* ── Event 3: Pull Requests ── */}
                 <div className="relative">
                     {/* Circle Node Icon */}
-                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 flex items-center justify-center text-zinc-500 dark:text-zinc-400 shadow-xs">
+                    <div className="absolute -left-[43px] sm:-left-[51px] top-0 w-8 h-8 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 flex items-center justify-center text-neutral-500 dark:text-neutral-400 shadow-xs">
                         <PullRequestIcon />
                     </div>
 
                     {/* Event Header */}
                     <div className="flex items-center justify-between gap-2">
-                        <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                        <h3 className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
                             Opened 4 pull requests in 1 repository
                         </h3>
                         <button
                             onClick={() => setOpenPRs(!openPRs)}
                             aria-label="Toggle pull requests"
-                            className="text-zinc-400 dark:text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200 p-1 cursor-pointer transition-colors"
+                            className="text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 p-1 cursor-pointer transition-colors"
                         >
                             <CollapseIcon />
                         </button>
@@ -201,14 +201,14 @@ const GithubActivity: React.FC = () => {
                                     href="https://github.com/sivakumar232/clg-chatbot"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-800 dark:hover:text-zinc-200 transition-colors truncate"
+                                    className="text-xs text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors truncate"
                                 >
                                     sivakumar232/clg-chatbot
                                 </a>
 
                                 <div className="flex items-center gap-1.5">
-                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-medium font-mono bg-zinc-100 dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-800">
-                                        <span className="flex items-center justify-center w-3.5 h-3.5 rounded-full bg-zinc-200 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 text-[9px] font-bold">
+                                    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium font-mono bg-neutral-100 dark:bg-neutral-900 text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800">
+                                        <span className="flex items-center justify-center w-3.5 h-3.5 rounded-full bg-neutral-200 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 text-[9px] font-bold">
                                             4
                                         </span>
                                         merged
@@ -225,12 +225,12 @@ const GithubActivity: React.FC = () => {
                                             href="https://github.com/sivakumar232/clg-chatbot"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline truncate"
+                                            className="text-neutral-900 dark:text-neutral-100 hover:underline truncate"
                                         >
                                             Feature/interface
                                         </a>
                                     </div>
-                                    <span className="text-zinc-400 dark:text-zinc-500 shrink-0 text-xs font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 shrink-0 text-xs font-mono">
                                         Sep 13
                                     </span>
                                 </div>
@@ -242,12 +242,12 @@ const GithubActivity: React.FC = () => {
                                             href="https://github.com/sivakumar232/clg-chatbot"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline truncate"
+                                            className="text-neutral-900 dark:text-neutral-100 hover:underline truncate"
                                         >
                                             Feature/agenticrag
                                         </a>
                                     </div>
-                                    <span className="text-zinc-400 dark:text-zinc-500 shrink-0 text-xs font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 shrink-0 text-xs font-mono">
                                         Sep 13
                                     </span>
                                 </div>
@@ -259,12 +259,12 @@ const GithubActivity: React.FC = () => {
                                             href="https://github.com/sivakumar232/clg-chatbot"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline truncate"
+                                            className="text-neutral-900 dark:text-neutral-100 hover:underline truncate"
                                         >
                                             Feature/retreivalv1
                                         </a>
                                     </div>
-                                    <span className="text-zinc-400 dark:text-zinc-500 shrink-0 text-xs font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 shrink-0 text-xs font-mono">
                                         Sep 9
                                     </span>
                                 </div>
@@ -276,12 +276,12 @@ const GithubActivity: React.FC = () => {
                                             href="https://github.com/sivakumar232/clg-chatbot"
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="text-zinc-800 dark:text-zinc-200 hover:text-black dark:hover:text-white hover:underline truncate"
+                                            className="text-neutral-900 dark:text-neutral-100 hover:underline truncate"
                                         >
                                             refactor(ingestion): optimize document processing and chunking quality
                                         </a>
                                     </div>
-                                    <span className="text-zinc-400 dark:text-zinc-500 shrink-0 text-xs font-mono">
+                                    <span className="text-neutral-500 dark:text-neutral-400 shrink-0 text-xs font-mono">
                                         Sep 8
                                     </span>
                                 </div>
@@ -298,7 +298,7 @@ const GithubActivity: React.FC = () => {
                     href="https://github.com/sivakumar232"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full py-2 text-center text-xs font-medium text-zinc-600 dark:text-zinc-400 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:text-black dark:hover:text-white hover:bg-zinc-50 dark:hover:bg-zinc-900/60 transition-colors"
+                    className="block w-full py-2 text-center text-xs font-medium text-neutral-500 dark:text-neutral-400 border border-neutral-200 dark:border-neutral-800 rounded-lg hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-50 dark:hover:bg-neutral-900/60 transition-colors"
                 >
                     Show more activity
                 </a>

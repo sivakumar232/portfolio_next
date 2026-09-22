@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import mobImage from '../assets/mob.jpg';
 import { socials } from '../data/socials';
-import WarmTooltip, { WarmTooltipGroup } from './WarmTooltip';
 
 export function Hero() {
     return (
@@ -41,31 +40,20 @@ export function Hero() {
                 <h2 className="text-[11px] font-mono tracking-wider uppercase text-zinc-500 dark:text-zinc-400 mb-2.5">
                     Here are my <span className="font-bold text-zinc-900 dark:text-zinc-100">socials</span>
                 </h2>
-                <WarmTooltipGroup delay={250} warmWindow={300} travel={280}>
-                    <div className="flex items-center gap-2 pt-1">
-                        {socials.map(({ name, href, icon: Icon }) => (
-                            <WarmTooltip
-                                key={name}
-                                content={name}
-                                side="top"
-                                size="sm"
-                                radius={6}
-                                gap={8}
-                                arrow
-                            >
-                                <a
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={name}
-                                    className="p-1.5 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
-                                >
-                                    <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                                </a>
-                            </WarmTooltip>
-                        ))}
-                    </div>
-                </WarmTooltipGroup>
+                <div className="flex items-center gap-2 pt-1">
+                    {socials.map(({ name, href, icon: Icon }) => (
+                        <a
+                            key={name}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={name}
+                            className="p-1.5 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                        >
+                            <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+                        </a>
+                    ))}
+                </div>
             </div>
         </div>
     );
