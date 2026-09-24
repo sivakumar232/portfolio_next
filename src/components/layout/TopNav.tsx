@@ -2,17 +2,20 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
-    { label: 'Home', href: '#' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Home', href: '/' },
+    { label: 'Projects', href: '/projects' },
+    { label: 'Skills', href: '/#skills' },
+    { label: 'Contact', href: '/#contact' },
 ];
 
 export function TopNav() {
     const [scrolled, setScrolled] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
+    const pathname = usePathname();
     const mountedRef = useRef(false);
     const [mounted, setMounted] = useState(false);
 
@@ -29,18 +32,24 @@ export function TopNav() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-        e.preventDefault();
-        if (href === '#' || href === '/') {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            window.history.pushState(null, '', '/');
-            return;
-        }
-        const targetId = href.slice(1);
-        const element = document.getElementById(targetId);
-        if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
-            window.history.pushState(null, '', href);
+    const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+        if (pathname === '/') {
+            if (href === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.history.pushState(null, '', '/');
+                return;
+            }
+            if (href.startsWith('/#')) {
+                e.preventDefault();
+                const targetId = href.slice(2);
+                const element = document.getElementById(targetId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                    window.history.pushState(null, '', href);
+                }
+                return;
+            }
         }
     };
 
@@ -50,20 +59,30 @@ export function TopNav() {
                 scrolled ? 'shadow-xs' : ''
             }`}
         >
-            {/* Content container aligned exactly with the page content column */}
             <div className="max-w-2xl mx-auto px-4 sm:px-6 h-11 sm:h-12 flex items-center justify-between">
                 {/* Navigation Links */}
                 <nav className="flex items-center gap-1 sm:gap-2 md:gap-2.5 overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden -ml-2.5 sm:-ml-3">
-                    {navLinks.map(({ label, href }) => (
-                        <a
-                            key={label}
-                            href={href}
-                            onClick={(e) => scrollToSection(e, href)}
-                            className="px-2.5 sm:px-3 py-1 text-xs sm:text-sm font-medium text-zinc-600 dark:text-zinc-400 whitespace-nowrap"
-                        >
-                            {label}
-                        </a>
-                    ))}
+                    {navLinks.map(({ label, href }) => {
+                        const isActive =
+                            label === 'Projects'
+                                ? pathname.startsWith('/project')
+                                : pathname === '/' && href === '/';
+
+                        return (
+                            <Link
+                                key={label}
+                                href={href}
+                                onClick={(e) => handleNavClick(e, href)}
+                                className={`px-2.5 sm:px-3 py-1 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
+                                    isActive
+                                        ? 'text-zinc-900 dark:text-zinc-100 font-semibold'
+                                        : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100'
+                                }`}
+                            >
+                                {label}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 {/* Right side: Divider & Theme Toggle */}

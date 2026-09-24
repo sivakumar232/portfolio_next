@@ -3,11 +3,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const sections = [
-    { id: 'education',    label: 'Education'    },
-    { id: 'projects', label: 'Projects' },
-    { id: 'skills',   label: 'Skills'   },
-    { id: 'github',   label: 'GitHub'   },
-    { id: 'contact',  label: 'Contact'  },
+    { id: 'education', label: 'Education' },
+    { id: 'projects',  label: 'Projects'  },
+    { id: 'skills',    label: 'Skills'    },
+    { id: 'github',    label: 'GitHub'    },
+    { id: 'contact',   label: 'Contact'   },
 ];
 
 /**

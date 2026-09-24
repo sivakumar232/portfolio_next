@@ -41,7 +41,7 @@ export default function Home() {
                 </Section>
 
                 <Section id="projects" title="Projects">
-                    <Projects limit={4} />
+                    <Projects limit={3} />
                 </Section>
 
                 <Section id="skills" title="Skills & Tools">

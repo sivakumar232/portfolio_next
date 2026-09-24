@@ -1,22 +1,54 @@
 import React from 'react';
-import Projects from '@/components/Projects';
-import { useClickSound } from "../../hooks/useClickSound";
+import type { Metadata } from 'next';
+import { Section } from '@/components/layout/Section';
+import { TopNav } from '@/components/layout/TopNav';
+import { Projects } from '@/components/Projects';
+import VisitorCounter from '@/components/VisitorCounter';
+import OnekoLoader from '@/components/Onekoloader';
+
+export const metadata: Metadata = {
+    title: 'Projects — Siva Kumar | AI Engineer',
+    description: 'All engineering projects and systems built by Siva Kumar.',
+    openGraph: {
+        title: 'Projects — Siva Kumar | AI Engineer',
+        description: 'All engineering projects and systems built by Siva Kumar.',
+        type: 'website',
+    },
+};
 
 export default function ProjectsPage() {
     return (
-        <div className="min-h-screen bg-white dark:bg-black bg-no-repeat bg-center bg-fixed transition-colors duration-300 relative bg-[radial-gradient(#d4d4d8_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:16px_16px]">
-            <div className="px-4 sm:px-6 py-6 sm:py-8 pb-16" style={{ maxWidth: '832px', margin: '0 auto' }}>
-                <a
-                    href="/"
-                    className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors "
-                >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                    </svg>
-                    Back to Home
-                </a>
-                <Projects />
+        <div className="min-h-screen bg-white dark:bg-black relative transition-colors duration-300 overflow-x-hidden">
+            {/* Subtle ambient light depth for glassmorphism */}
+            <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+                <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[550px] h-[320px] bg-gradient-to-b from-zinc-200/50 to-transparent dark:from-zinc-800/25 dark:to-transparent rounded-full blur-3xl" />
+                <div className="absolute top-[60%] left-1/2 -translate-x-1/2 w-[500px] h-[280px] bg-gradient-to-t from-zinc-200/40 to-transparent dark:from-zinc-800/20 dark:to-transparent rounded-full blur-3xl" />
             </div>
+
+            {/* Universal TopNav */}
+            <TopNav />
+
+            {/* Main Content Container matching exactly home page layout & sizing */}
+            <main className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 flex flex-col z-10 relative">
+                {/* Full version of #projects */}
+                <Section title="Projects">
+                    <Projects />
+                </Section>
+
+                {/* Footer matching root layout */}
+                <footer className="pt-8 pb-12 mt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                    <div>
+                        <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                            &copy; {new Date().getFullYear()} Siva Kumar. All rights reserved.
+                        </p>
+                    </div>
+                    <div className="text-xs font-mono text-neutral-500 dark:text-neutral-400">
+                        <VisitorCounter />
+                    </div>
+                </footer>
+            </main>
+
+            <OnekoLoader />
         </div>
     );
 }
