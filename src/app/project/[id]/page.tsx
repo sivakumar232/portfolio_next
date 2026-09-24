@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!project) {
         return {
-            title: 'Project Not Found — Siva Kumar',
+            title: 'Project Not Found — Siva Kumar Vemuri',
         };
     }
 
     return {
-        title: `${project.title} — Siva Kumar | AI Engineer`,
+        title: `${project.title} — Siva Kumar Vemuri | AI Engineer`,
         description: project.description,
         openGraph: {
             title: `${project.title} — Case Study & Architecture`,
@@ -193,7 +193,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                 <footer className="pt-8 pb-12 mt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                            &copy; {new Date().getFullYear()} Siva Kumar. All rights reserved.
+                            &copy; {new Date().getFullYear()} Siva Kumar Vemuri. All rights reserved.
                         </p>
                     </div>
                     <div className="text-xs font-mono text-neutral-500 dark:text-neutral-400">

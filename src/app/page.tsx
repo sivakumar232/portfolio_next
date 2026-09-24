@@ -64,7 +64,7 @@ export default function Home() {
                 <footer className="pt-8 pb-12 mt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400">
-                            &copy; {new Date().getFullYear()} Siva Kumar. All rights reserved.
+                            &copy; {new Date().getFullYear()} Siva Kumar Vemuri. All rights reserved.
                         </p>
                     </div>
                     <div className="text-xs font-mono text-neutral-500 dark:text-neutral-400">

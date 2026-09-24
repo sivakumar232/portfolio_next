@@ -410,7 +410,7 @@ export const WarmTooltipGroup = forwardRef<WarmTooltipGroupHandle, WarmTooltipGr
                 }}
               >
                 <motion.span
-                  className="absolute inset-0 rounded-[var(--wt-radius)] [background:var(--wt-surface)] [color:var(--wt-ink)] [box-shadow:0_1px_2px_rgba(0,0,0,0.12),0_8px_24px_-8px_rgba(0,0,0,0.45)] [transform-origin:var(--wt-origin)] contrast-more:[box-shadow:inset_0_0_0_1px_color-mix(in_srgb,var(--wt-ink)_40%,transparent)]"
+                  className="absolute inset-0 rounded-[var(--wt-radius)] border border-neutral-800/60 dark:border-neutral-200/60 [background:var(--wt-surface)] [color:var(--wt-ink)] [box-shadow:0_4px_16px_-2px_rgba(0,0,0,0.25),0_2px_4px_-1px_rgba(0,0,0,0.1)] dark:[box-shadow:0_8px_24px_-4px_rgba(255,255,255,0.15),0_2px_6px_rgba(0,0,0,0.5)] [transform-origin:var(--wt-origin)]"
                   style={{ transform: pop, opacity: presence, filter: blur }}
                 >
                   <AnimatePresence initial={false} custom={st.current.swap}>

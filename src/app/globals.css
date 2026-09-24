@@ -2,13 +2,13 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --wt-default-surface: #18181b;
-  --wt-default-ink: #fafafa;
+  --wt-default-surface: #09090b;
+  --wt-default-ink: #ffffff;
 }
 
 .dark {
   --wt-default-surface: #f4f4f5;
-  --wt-default-ink: #18181b;
+  --wt-default-ink: #09090b;
 }
 
 html {

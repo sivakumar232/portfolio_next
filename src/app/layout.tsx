@@ -78,11 +78,11 @@ const gtFlexaMono = localFont({
 });
 
 export const metadata: Metadata = {
-    title: 'Siva Kumar — AI Engineer',
-    description: 'Portfolio of Siva Kumar — AI Engineer specializing in AI agents, agentic workflows, and scalable AI applications.',
+    title: 'Siva Kumar Vemuri — AI Engineer',
+    description: 'Portfolio of Siva Kumar Vemuri — AI Engineer specializing in AI agents, agentic workflows, and scalable AI applications.',
     icons: { icon: '/favicon.png' },
     openGraph: {
-        title: 'Siva Kumar — AI Engineer',
+        title: 'Siva Kumar Vemuri — AI Engineer',
         description: 'AI Engineer specializing in AI agents, agentic workflows, and shipping production AI applications.',
         type: 'website',
     },

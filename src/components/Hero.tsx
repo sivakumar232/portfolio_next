@@ -14,7 +14,7 @@ export function Hero() {
                 <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-4 border-white dark:border-zinc-950 overflow-hidden relative shadow-sm -mt-8 sm:-mt-10">
                     <Image
                         src={mobImage}
-                        alt="Siva Kumar"
+                        alt="Siva Kumar Vemuri"
                         fill
                         className="object-cover"
                         priority
@@ -25,7 +25,7 @@ export function Hero() {
 
             {/* Name + subtitle */}
             <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                Siva Kumar
+                Siva Kumar Vemuri
             </h1>
             <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5 mb-3">
                 AI Engineer · India
