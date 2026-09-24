@@ -1,6 +1,9 @@
+'use client';
+
 import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
+import WarmTooltip from './WarmTooltip';
 
 const Contact: React.FC = () => {
     return (
@@ -39,16 +42,17 @@ const Contact: React.FC = () => {
                     { href: 'https://www.linkedin.com/in/sivakumarvemuri', icon: FaLinkedin, label: 'LinkedIn' },
                     { href: 'https://x.com/sivakumarr3105', icon: FaXTwitter, label: 'Twitter / X' },
                 ].map(({ href, icon: Icon, label }) => (
-                    <a
-                        key={label}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={label}
-                        className="p-1.5 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200"
-                    >
-                        <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                    </a>
+                    <WarmTooltip key={label} content={label} side="top" size="sm">
+                        <a
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label={label}
+                            className="p-1.5 text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors duration-200"
+                        >
+                            <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+                        </a>
+                    </WarmTooltip>
                 ))}
             </div>
         </div>

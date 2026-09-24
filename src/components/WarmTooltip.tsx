@@ -713,11 +713,9 @@ export default function WarmTooltip({
   className = ''
 }: WarmTooltipProps) {
   const context = useContext(GroupContext);
-  const { resolvedTheme } = useTheme();
-  const isDark = resolvedTheme === 'dark';
 
-  const resolvedSurface = surfaceColor || (isDark ? '#f4f4f5' : '#18181b');
-  const resolvedInk = inkColor || (isDark ? '#18181b' : '#fafafa');
+  const resolvedSurface = surfaceColor || 'var(--wt-default-surface)';
+  const resolvedInk = inkColor || 'var(--wt-default-ink)';
 
   const props: TriggerProps = {
     content,

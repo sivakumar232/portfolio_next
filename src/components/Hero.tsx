@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import mobImage from '../assets/mob.jpg';
 import { socials } from '../data/socials';
+import WarmTooltip from './WarmTooltip';
 
 export function Hero() {
     return (
@@ -41,17 +44,18 @@ export function Hero() {
                     Here are my <span className="font-bold text-zinc-900 dark:text-zinc-100">socials</span>
                 </h2>
                 <div className="flex items-center gap-2 pt-1">
-                    {socials.map(({ name, href, icon: Icon }) => (
-                        <a
-                            key={name}
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label={name}
-                            className="p-1.5 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
-                        >
-                            <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
-                        </a>
+                    {socials.map(({ name, href, icon: Icon, label }) => (
+                        <WarmTooltip key={name} content={label || name} side="top" size="sm">
+                            <a
+                                href={href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={label || name}
+                                className="p-1.5 text-zinc-500 dark:text-zinc-400 hover:text-black dark:hover:text-white transition-colors duration-200"
+                            >
+                                <Icon className="w-4 h-4 sm:w-[18px] sm:h-[18px]" />
+                            </a>
+                        </WarmTooltip>
                     ))}
                 </div>
             </div>

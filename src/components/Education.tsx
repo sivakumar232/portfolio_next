@@ -5,7 +5,7 @@ import srkrLogo from '../assets/srkr_logo.jpg';
 const Education: React.FC = () => {
     return (
         <div>
-            <div className="flex items-start border border-neutral-200 dark:border-neutral-800 p-3 rounded-xl gap-3 bg-white dark:bg-neutral-950">
+            <div className="glass-panel flex items-start p-3 rounded-xl gap-3">
                 <div className="w-9 h-9 shrink-0 border border-neutral-200 dark:border-neutral-800 rounded-md overflow-hidden relative">
                     <Image
                         src={srkrLogo}

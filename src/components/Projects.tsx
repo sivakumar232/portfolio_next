@@ -18,7 +18,7 @@ export function Projects({ limit, showSeeMore = false }: ProjectsProps = {}) {
                 <Link
                     key={project.id}
                     href={`/project/${project.id}`}
-                    className="group flex flex-col p-4 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:border-neutral-400 dark:hover:border-neutral-700 hover:bg-neutral-50/60 dark:hover:bg-neutral-900/40 transition-all duration-200"
+                    className="glass-panel group flex flex-col p-4 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition-all duration-200"
                 >
                     <div className="flex items-center justify-between gap-3 mb-1.5">
                         <h3 className="text-sm font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-black dark:group-hover:text-white transition-colors">

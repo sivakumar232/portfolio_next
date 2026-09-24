@@ -104,7 +104,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                         {project.highlights.map((highlight, idx) => (
                             <div
                                 key={idx}
-                                className="flex items-start border border-neutral-200 dark:border-neutral-800 p-3 rounded-xl gap-3 bg-white dark:bg-neutral-950"
+                                className="glass-panel flex items-start p-3 rounded-xl gap-3"
                             >
                                 <div className="w-5 h-5 mt-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/60 flex items-center justify-center shrink-0">
                                     <BsCheck2 className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
@@ -163,7 +163,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <Link
                             href={`/project/${prevProject.id}`}
-                            className="group flex flex-col p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:border-neutral-400 dark:hover:border-neutral-700 transition-colors"
+                            className="glass-panel group flex flex-col p-3 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition-colors"
                         >
                             <span className="flex items-center gap-1.5 text-[11px] text-neutral-400 dark:text-neutral-500 mb-1">
                                 <FaArrowLeft className="w-2.5 h-2.5 transition-transform group-hover:-translate-x-1" />
@@ -176,7 +176,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
                         <Link
                             href={`/project/${nextProject.id}`}
-                            className="group flex flex-col p-3 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 hover:border-neutral-400 dark:hover:border-neutral-700 transition-colors sm:text-right"
+                            className="glass-panel group flex flex-col p-3 rounded-xl hover:border-neutral-400 dark:hover:border-neutral-700 transition-colors sm:text-right"
                         >
                             <span className="flex items-center sm:justify-end gap-1.5 text-[11px] text-neutral-400 dark:text-neutral-500 mb-1">
                                 <span>Next</span>
