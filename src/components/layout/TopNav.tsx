@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Projects', href: '/projects' },
-    { label: 'Skills', href: '/#skills' },
+    { label: 'Blogs', href: '/blogs' },
     { label: 'Contact', href: '/#contact' },
 ];
 
@@ -66,6 +66,8 @@ export function TopNav() {
                         const isActive =
                             label === 'Projects'
                                 ? pathname.startsWith('/project')
+                                : label === 'Blogs'
+                                ? pathname.startsWith('/blog')
                                 : pathname === '/' && href === '/';
 
                         return (

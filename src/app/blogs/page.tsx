@@ -1,21 +1,24 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { getAllPosts } from '@/lib/blog';
 import { TopNav } from '@/components/layout/TopNav';
-import { Projects } from '@/components/Projects';
+import { BlogList } from '@/components/BlogList';
 import VisitorCounter from '@/components/VisitorCounter';
 import OnekoLoader from '@/components/Onekoloader';
 
 export const metadata: Metadata = {
-    title: 'Projects — Siva Kumar Vemuri | AI Engineer',
-    description: 'All engineering projects and systems built by Siva Kumar Vemuri.',
+    title: 'Blogs — Siva Kumar Vemuri | AI Engineer',
+    description: 'Articles, architectural deep dives, and thoughts on AI, LLMs, and systems engineering.',
     openGraph: {
-        title: 'Projects — Siva Kumar Vemuri | AI Engineer',
-        description: 'All engineering projects and systems built by Siva Kumar Vemuri.',
+        title: 'Blogs — Siva Kumar Vemuri',
+        description: 'Articles, architectural deep dives, and thoughts on AI, LLMs, and systems engineering.',
         type: 'website',
     },
 };
 
-export default function ProjectsPage() {
+export default function BlogsPage() {
+    const posts = getAllPosts();
+
     return (
         <div className="min-h-screen bg-white dark:bg-black relative transition-colors duration-300 overflow-x-hidden">
             {/* Subtle ambient light depth for glassmorphism */}
@@ -27,20 +30,19 @@ export default function ProjectsPage() {
             {/* Universal TopNav */}
             <TopNav />
 
-            {/* Main Content Container matching exactly home page layout & sizing */}
+            {/* Main Content Container matching project layout & sizing */}
             <main className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 flex flex-col z-10 relative">
-                {/* Header Section matching blogs */}
+                {/* Header Section */}
                 <div className="pt-2 pb-6 border-b border-zinc-200/80 dark:border-zinc-800/80">
                     <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                        Projects
+                        Blogs
                     </h1>
                 </div>
 
-                <div className="pt-6">
-                    <Projects />
-                </div>
+                {/* Articles List with hover focus effect */}
+                <BlogList posts={posts} />
 
-                {/* Footer matching root layout */}
+                {/* Footer */}
                 <footer className="pt-8 pb-12 mt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400">
