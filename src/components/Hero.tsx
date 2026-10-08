@@ -27,9 +27,7 @@ export function Hero() {
             <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                 Siva Kumar Vemuri
             </h1>
-            <p className="text-xs sm:text-sm font-medium text-zinc-500 dark:text-zinc-400 mt-0.5 mb-3">
-                AI Engineer · India
-            </p>
+
 
             {/* Bio */}
             <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
