@@ -27,9 +27,9 @@ export default function ResumePage() {
             {/* Universal TopNav */}
             <TopNav />
 
-            {/* Main Content Container */}
-            <main className="max-w-4xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 flex flex-col z-10 relative">
-                {/* Header Section */}
+            {/* Main Content Container matching exactly other pages layout & sizing */}
+            <main className="max-w-2xl mx-auto px-4 sm:px-6 pt-16 sm:pt-20 pb-20 flex flex-col z-10 relative">
+                {/* Header Section matching blogs & projects */}
                 <div className="pt-2 pb-6 border-b border-zinc-200/80 dark:border-zinc-800/80 flex items-center justify-between gap-4">
                     <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
                         Resume
@@ -40,7 +40,7 @@ export default function ResumePage() {
                         <a
                             href="/res_portfolio.pdf"
                             download="Siva_Kumar_Vemuri_Resume.pdf"
-                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 hover:opacity-90 transition-opacity"
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-xs"
                         >
                             <Download className="w-3.5 h-3.5" />
                             Download PDF
@@ -49,12 +49,14 @@ export default function ResumePage() {
                 </div>
 
                 {/* Embedded PDF Viewer */}
-                <div className="mt-6 w-full rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm bg-zinc-100 dark:bg-zinc-900/60 p-1 sm:p-2">
-                    <iframe
-                        src="/res_portfolio.pdf#view=FitH"
-                        title="Siva Kumar Vemuri Resume"
-                        className="w-full h-[75vh] sm:h-[82vh] rounded-xl border-0 bg-white dark:bg-zinc-950"
-                    />
+                <div className="pt-6">
+                    <div className="w-full rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 shadow-sm">
+                        <iframe
+                            src="/res_portfolio.pdf?v=latest#view=FitH"
+                            title="Siva Kumar Vemuri Resume"
+                            className="w-full h-[75vh] sm:h-[80vh] border-0 bg-white dark:bg-zinc-950 block"
+                        />
+                    </div>
                 </div>
 
                 {/* Mobile Fallback Note */}
@@ -72,7 +74,7 @@ export default function ResumePage() {
                     </p>
                 </div>
 
-                {/* Footer */}
+                {/* Footer matching root layout */}
                 <footer className="pt-8 pb-12 mt-12 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                     <div>
                         <p className="text-xs text-neutral-500 dark:text-neutral-400">
