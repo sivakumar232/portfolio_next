@@ -9,6 +9,7 @@ const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Projects', href: '/projects' },
     { label: 'Blogs', href: '/blogs' },
+    { label: 'Resume', href: '/resume' },
     { label: 'Contact', href: '/#contact' },
 ];
 
@@ -68,6 +69,8 @@ export function TopNav() {
                                 ? pathname.startsWith('/project')
                                 : label === 'Blogs'
                                 ? pathname.startsWith('/blog')
+                                : label === 'Resume'
+                                ? pathname.startsWith('/resume')
                                 : pathname === '/' && href === '/';
 
                         return (
