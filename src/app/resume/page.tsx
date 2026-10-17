@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { TopNav } from '@/components/layout/TopNav';
 import VisitorCounter from '@/components/VisitorCounter';
 import OnekoLoader from '@/components/Onekoloader';
+import ResumeViewer from '@/components/ResumeViewer';
 import { Download } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -51,11 +52,7 @@ export default function ResumePage() {
                 {/* Embedded PDF Viewer */}
                 <div className="pt-6">
                     <div className="w-full rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900 shadow-sm">
-                        <iframe
-                            src="/res_portfolio.pdf?v=latest#view=FitH"
-                            title="Siva Kumar Vemuri Resume"
-                            className="w-full h-[75vh] sm:h-[80vh] border-0 bg-white dark:bg-zinc-950 block"
-                        />
+                        <ResumeViewer />
                     </div>
                 </div>
 
