@@ -5,6 +5,7 @@ import bushidoBanner from '../assets/project_banners/bushido.jpeg';
 import backdropBanner from '../assets/project_banners/backdrop.jpeg';
 import revaBanner from '../assets/project_banners/reva.jpeg';
 import nebulaBanner from '../assets/project_banners/nebulasketch.jpeg';
+import askcampusBanner from '../assets/project_banners/askcampus.jpeg';
 
 export type Project = {
     id: string;
@@ -22,6 +23,27 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+    {
+        id: 'askcampus',
+        title: 'Askcampus',
+        category: 'Agentic RAG & Campus Intelligence',
+        year: '2024',
+        status: 'Building',
+        description: 'A production-grade, self-reflective Agentic RAG assistant for academic institutions, built with LangGraph, NeMo Guardrails, Hybrid Retrieval (Dense + BM25 + RRF), and Cross-Encoder Reranking.',
+        longDescription: 'A production-grade, self-reflective Agentic RAG assistant for academic institutions built with LangGraph, NeMo Guardrails, Hybrid Retrieval (Dense + BM25 + RRF), and Cross-Encoder Reranking. It features a self-reflective agentic workflow using LangGraph that classifies user queries, routes chit-chat directly, breaks complex questions into sub-queries, and automatically reformulates search queries if initial evidence is lacking. The retrieval architecture combines semantic vector search (Jina Embeddings in Qdrant) with keyword search (BM25) merged using Reciprocal Rank Fusion (RRF), Jina Reranker v2 cross-encoder precision reranking, and a 7-point evidence validation gate. Guardrails enforce input rails to block prompt injections and off-topic questions, output rails to stop hallucinated course codes, and deterministic PII scrubbing to protect private contact numbers, serving real-time streaming via FastAPI Server-Sent Events (SSE) and Next.js.',
+        highlights: [
+            'Hybrid Retrieval (Dense + BM25 + RRF): Combines semantic vector search (Jina Embeddings in Qdrant) with BM25 keyword search and Reciprocal Rank Fusion',
+            'Self-Reflective Agentic Workflow (LangGraph): State graph that classifies user queries, routes chit-chat directly, decomposes sub-queries, and reformulates searches',
+            'NeMo Guardrails & Safety: Enforces input rails to block prompt injections, output rails for course code grounding, and deterministic PII scrubbing',
+            'Cross-Encoder Precision Reranking: Re-evaluates retrieved document chunks with Jina Reranker v2 using deep cross-attention before generating answers',
+            '7-Point Evidence Validation Gate: Verifies retrieved context quality, pruning redundant text, ensuring sub-query coverage, and verifying target entities',
+            'Full-Stack Chat Application: FastAPI backend supporting Server-Sent Events (SSE) real-time streaming with multi-key failover and Next.js chat interface',
+        ],
+        tags: ['LangGraph', 'Agentic RAG', 'NeMo Guardrails', 'Qdrant', 'FastAPI', 'Next.js', 'Python', 'Jina AI', 'Groq'],
+        github: 'https://github.com/sivakumar232/Askcampus',
+        link: null,
+        image: askcampusBanner,
+    },
     {
         id: 'reva-ai',
         title: 'REVA AI',
